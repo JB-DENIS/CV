@@ -18,12 +18,10 @@ img_size=(150,150)
    
 profil_img=Image.open('img/profil.jpg')
 
-acc_theme=Image.open('img/acc_theme.jpg')
-
 comp_duo=Image.open('img/comp_duo2.jpg')
 comp_ico=Image.open('img/comp_ico.jpg')
 
-form_road=Image.open('img/form_road.jpg')
+form_road=Image.open('img/form_road2.jpg')
 
 exp_data=Image.open('img/exp_data.jpg').resize(img_size)
 exp_chimie=Image.open('img/exp_chimie.jpg').resize(img_size)
@@ -45,65 +43,65 @@ publi_poster=Image.open('img/publi_poster.jpg')
 publi_these=Image.open('img/publi_these.jpg')
 publi_prix=Image.open('img/publi_prix.jpg')
 
-media_cv=Image.open('img/media_cv.jpg')
+media_cv=Image.open('img/media_cv2.jpg')
 media_lm=Image.open('img/media_lm.jpg')
 media_lr=Image.open('img/media_lr.jpg')
 media_git=Image.open('img/media_git.jpg')
 media_linkedin=Image.open('img/media_linkedin.jpg')
 
-glob_glo=Image.open('img/glob_glo2.jpg')
+#glob_glo=Image.open('img/glob_glo2.jpg')
+glob_comp=Image.open('img/glob_comp.jpg')
+glob_int=Image.open('img/glob_int.jpg')
+glob_exp=Image.open('img/glob_exp.jpg')
+glob_form=Image.open('img/glob_form.jpg')
+glob_kw2=Image.open('img/glob_kw3.jpg')
+
 
 
 ### Pages
 
 def page_accueille() :
-        
-    st.markdown("<h1 ; color: blue;'>Bienvenue sur mon CV intéractif</h1>", unsafe_allow_html=True)
-    st.text('')
-    st.subheader('Choisissez un thème dans le menu **_Navigation_** parmis :')  
-    st.text('')
-        
-    st.image(acc_theme,width=500)
+    st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)    
+    st.markdown("<h1 style='text-align: center;'>Bienvenue sur mon CV intéractif</h1>", unsafe_allow_html=True)
+
+    st.info(' Choisissez une catégorie dans le menu **_Navigation_** à gauche.')  
+   
+    col1, col2, col3  = st.beta_columns((2,0.2,2.8))
+    col1.subheader('Compétences')
+    col1.image(glob_comp,use_column_width=True)
+    col3.subheader('Expériences')
+    col3.image(glob_exp,use_column_width=True)
     
-    st.text('')
-    st.text('')
-    st.write('Ou **_Vue Globale_** dans le menu **_Navigation_**')  
-    st.text('')
+    col4, col5, col6, col7, col8 = st.beta_columns((3,0.00000001,1.1,0.2,1.4))
+    col4.subheader('Intérets')
+    col4.image(glob_int,use_column_width=True)
+    col6.subheader('Formations')
+    col6.image(glob_form,use_column_width=True)
+    col8.subheader('Keywords')
+    col8.image(glob_kw2,use_column_width=True)
+   
+    
    
                   
 def page_competence  ():
-    
-    st.image(comp_duo,width=700) 
+    st.header('Compétences')
+    st.text('')
+    st.text('')
+    st.image(comp_duo,width=600) 
     st.image(comp_ico,width=600)  
 
     
 def page_formation  ():  
+    st.header('Formations')
+    st.text('')
+    st.text('')
+    st.image(form_road,width=800)
     
-    col1, col2  = st.beta_columns(2)
-    col1.image(form_road,use_column_width=True)
     
-    col2.text('')
-    col2.subheader('2009-2012')
-    col2.write('Ingénieur Physico-Chimiste')
-    col2.text('ENSCBP')
-    col2.text('')
-    
-    col2.subheader('2011-2012')
-    col2.write('Master Recherche Science des Matériaux')
-    col2.text('Université Bordeaux I')
-    
-    col2.text('')
-    col2.subheader('2012-2016')
-    col2.write('Doctorat de Chimie des Matériaux - Métallurgie')
-    col2.text('Université Paris Est - CEA')
-    
-    col2.text('')
-    col2.subheader('2020-2021')
-    col2.write('Master Data Scientist')
-    col2.text('Openclassrooms - CentralSupelec')
-
 def page_experience():
-    
+    st.header('Expériences')
+    st.text('')
+    st.text('')
     st.markdown("<h5 style='text-align: center; color: gray;'>Choisissez une catégorie</h5>", unsafe_allow_html=True)
     st.text('')
     col1, col2, col3  = st.beta_columns(3)
@@ -132,7 +130,9 @@ def page_experience():
         col14.image(exp_data_oc,use_column_width=True)
         
         st.subheader('Missions')
-        st.write('La formation se décline sous forme de 7 projets professionnels réels utilisant des données terrain actuelles. L’environnement mis en place pour ces projets est un environnement Python et la méthodologie de travail appliquée est la méthode S.M.A.R.T.')
+        st.write('La formation se décline sous forme de 7 projets professionnels utilisant des données terrain. L’environnement mis en place pour ces projets est le language Python et la méthodologie de travail appliquée est la méthode S.M.A.R.T.')
+        st.text('')
+        st.write('Exemples de projets réalisés :')
         st.text('')
         col15, col16 = st.beta_columns((1,1))
         col15.write('**_Anticipation de consommation et émission de bâtiments_** ')
@@ -150,15 +150,14 @@ def page_experience():
         st.subheader('Réalisations')
         st.write(':black_small_square: Data Mining, Etude statistique')
         st.write(':black_small_square: Pre-processing, feature engineering, réduction dimensionnelle (ACP)')
-        st.write(':black_small_square: Machine learning :')
-        st.write(':white_small_square:   supervisé : régression, kNN, SVM,  Random Forest, XGBoost, LightGBM')
-        st.write(':white_small_square:   non supervisé : Kmeans, DBScan, HAC, GMM')
+        st.write(':black_small_square: Machine learning supervisé : régression, kNN, SVM,  Random Forest, XGBoost, LightGBM')
+        st.write(':black_small_square: Machine learning non supervisé : Kmeans, DBScan, HAC, GMM')
         st.write(':black_small_square: Métrique métier, optimisation bayésienne, stacking')
         st.write(':black_small_square: Deep Learning, NLP (BoW, Tf-IDF, Embedding), visuel (BoVW, CNN, Transfert learning)')
         st.write(':black_small_square: Spark, AWS')
         st.write(':black_small_square: Déploiement  API, Dashboard ')
         st.write(':black_small_square: Analyse de résultats, reporting et vulgarisation ')
-        st.write(':black_small_square: GitHub (Voir **Média**) ')
+        st.write(':black_small_square: GitHub rassemblant tous les projets (Voir **Média**) ')
         
         ###
         st.text('')
@@ -236,7 +235,7 @@ def page_experience():
         st.subheader('Réalisations')
         st.write(':black_small_square: Elaboration d’alliages en four à induction – Frittages. Métallurgie, Hydrure sous pression ')
         st.write(':black_small_square: DRX, MEB, EDX, EPMA, DSC, mesure PCT, cyclage')
-        st.write(':black_small_square: Etablissement de lois de prédiction de volume de maille d\'un alliage quinaire')
+        st.write(':black_small_square: Modélisation des lois de prédiction de volume de maille d\'un alliage quinaire')
         st.write(':black_small_square: Réalisation d\'un abaque PCT sur l\'utilisation d\'Al et Si dans un système TiVFe')
         st.write(':black_small_square: Procédure d\'élaboration optimisée')
         st.write(':black_small_square: Manuscrit de thèse - Rapport sur les Energies (Voir **Publications**)')
@@ -288,7 +287,7 @@ def page_experience():
         st.text('')
         col13, col14 = st.beta_columns((2.5,1))
         col13.subheader('Contexte')
-        col13.write('Le Projet ROPAS visait la production de batteries flexibles imprimées sur papier. Afin de s’affranchir des constituants classiques et coûteux d’un accumulateur et répondre à l’appauvrissement du lithium, le projet avait pour objectif la réalisation de nouveaux matériaux d’électrodes organiques (ORB) pour accumulateur fonctionnant aussi bien au Lithium, qu’au sodium.')
+        col13.write('Le Projet ROPAS visait la production de batteries flexibles imprimées sur papier. Afin de s’affranchir des constituants classiques et coûteux d’un accumulateur et répondre à l’appauvrissement du lithium, le projet avait pour objectif la réalisation de nouveaux matériaux d’électrodes organiques (ORB) pour accumulateur fonctionnant aussi bien au Lithium, qu’au Sodium.')
         col14.image(exp_sc_bat,use_column_width=True)
         
         st.subheader('Missions')
@@ -365,7 +364,7 @@ def page_experience():
         st.text('')
         col13, col14 = st.beta_columns((2.5,1))
         col13.subheader('Contexte')
-        col13.write('Construire son foyer est tout aussi important que sa carrière professionnelle')
+        col13.write('Achat d\'une maison à retapper pour en faire notre foyer familiale.')
         col14.image(exp_diver_maison,use_column_width=True)
                        
         st.subheader('Réalisations')
@@ -444,12 +443,17 @@ def page_experience():
             st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)   
 
 def page_interet():
+    st.header('Intérets')
+    st.text('')
+    st.text('')
     st.image(interet_mot,width=800)#use_column_width=True)
     
        
 def page_media():
+    st.header('Médias')
+    st.text('')
     
-    cv=('[**CV**](https://drive.google.com/file/d/1jGRBmbWLFGDPa2xb-H1ufx6KLfrV7RRJ/view?usp=sharing)')
+    cv=('[**CV**](https://drive.google.com/file/d/1m6RCFIE46yZG5iUjaUsNpnvu5DaDBths/view?usp=sharing)')
     lm=('[**Lettre de motivation**](https://drive.google.com/file/d/1hpbAiw7URmtNtQo_BdIHHOX12_Zpb3GC/view?usp=sharing)')
     lr=('[**Lettre de recommandation**](https://drive.google.com/file/d/1UoU_yFMkkjtdxRiluyNAN9NfIWck2mOk/view?usp=sharing)')
     git=('[**GitHub**](https://github.com/JB-DENIS)')
@@ -491,7 +495,8 @@ def page_media():
     col2.markdown(yt, unsafe_allow_html=True)  
             
 def page_publi():
-    
+    st.header('Publications')
+    st.text('')
     br=('[**Brevet**](https://drive.google.com/file/d/1RZVpIPAJiq4zO9LPjO2_ahqiKJrSqQ2A/view?usp=sharing)')
     po=('[**Poster**](https://drive.google.com/file/d/1btDY31nkJ-ycOGMaT_ar9SBzTMzDSllW/view?usp=sharing)')
     th=('[**Thèse**](https://drive.google.com/file/d/1-OMgCIu-agnUHLJW8uUhvnJHNP_fdg7t/view?usp=sharing)')
@@ -516,17 +521,18 @@ def page_publi():
     st.text('')        
     st.text('')  
 
-def page_global():
-    st.image(glob_glo,width=850)
     
 ### Display :
     
 st.sidebar.image(profil_img)
 st.sidebar.title('Jean-Benoît DENIS')
 st.sidebar.subheader("Ingénieur Data Scientist")
-st.sidebar.write('4 Rue Hector Blanchet 38500 Voiron')
+st.sidebar.text('')
+st.sidebar.write('31 ans - Permis B')
+st.sidebar.write(':round_pushpin:[4 Rue Hector Blanchet 38500 Voiron](https://goo.gl/maps/E8iCnmAg6AetDBy76)')
 st.sidebar.write(':telephone_receiver: 06 29 07 69 72')
 st.sidebar.write(':e-mail: [jeanbenoitdenis@gmail.com](mailto:jeanbenoitdenis@gmail.com)')
+st.sidebar.text('')
 
 option = st.sidebar.selectbox('Navigation',['Accueil',
                                             'Compétences',
@@ -534,32 +540,32 @@ option = st.sidebar.selectbox('Navigation',['Accueil',
                                             'Expériences',
                                             'Intérets',
                                             'Publications',
-                                            'Médias',
-                                            'Vue globale'
-                                             ])      
+                                            'Médias'
+                                            ])      
+
+
 
 if option =='Accueil':
     page_accueille()
     
-if option == 'Compétences' :
+elif option == 'Compétences' :
     page_competence()    
 
-if option == 'Formations' :
+elif option == 'Formations' :
     page_formation()      
 
-if option == 'Expériences' :
+elif option == 'Expériences' :
     page_experience()      
 
-if option == 'Intérets' :
+elif option == 'Intérets' :
     page_interet()  
 
-if option == 'Publications' :
+elif option == 'Publications' :
     page_publi()  
 
-if option == 'Médias' :
+elif option == 'Médias' :
     page_media()   
     
-if option == 'Vue globale' :
-    page_global() 
     
+####################################################################    
 
