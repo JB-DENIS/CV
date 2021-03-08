@@ -112,7 +112,7 @@ def page_experience():
     col4, col5, col6, col7, col8, col9  = st.beta_columns((0.5,1,0.35,1,0.45,1))
     bouton1=col5.button('Data')
     bouton2=col7.button('Science')
-    bouton3=col9.button('Divers')
+    bouton3=col9.button('Diverses')
     
     if bouton1:
         
