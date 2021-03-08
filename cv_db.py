@@ -379,7 +379,7 @@ def page_experience():
         st.text('')
         st.text('')
         col10, col11, col12  = st.beta_columns((2,1,1))
-        col10.header('Opérateur, cuisinier, homme de main')
+        col10.header('Opérateur, cuisinier, fermier')
         st.subheader('_Woofing au Japon_')
         col11.text('')
         col12.header('2008')
