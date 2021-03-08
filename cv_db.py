@@ -364,7 +364,7 @@ def page_experience():
         st.text('')
         col13, col14 = st.beta_columns((2.5,1))
         col13.subheader('Contexte')
-        col13.write('Achat d\'une maison à retapper pour en faire notre foyer familiale.')
+        col13.write('Achat d\'une maison à rénover.')
         col14.image(exp_diver_maison,use_column_width=True)
                        
         st.subheader('Réalisations')
