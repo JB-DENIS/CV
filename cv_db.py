@@ -12,11 +12,12 @@ from PIL import Image
 st.set_page_config(layout="centered")
 
 
+
 ### Chargement des images :
     
 img_size=(150,150) 
    
-profil_img=Image.open('img/profil.jpg')
+profil_img=Image.open('img/profils2.png')
 
 comp_duo=Image.open('img/comp_duo2.jpg')
 comp_ico=Image.open('img/comp_ico.jpg')
@@ -49,13 +50,14 @@ media_lr=Image.open('img/media_lr.jpg')
 media_git=Image.open('img/media_git.jpg')
 media_linkedin=Image.open('img/media_linkedin.jpg')
 
-#glob_glo=Image.open('img/glob_glo2.jpg')
 glob_comp=Image.open('img/glob_comp.jpg')
 glob_int=Image.open('img/glob_int.jpg')
 glob_exp=Image.open('img/glob_exp.jpg')
 glob_form=Image.open('img/glob_form.jpg')
 glob_kw2=Image.open('img/glob_kw3.jpg')
 
+media_yt_f = open('video/YT.mp4', 'rb')
+media_yt = media_yt_f.read()
 
 
 ### Pages
@@ -79,19 +81,20 @@ def page_accueille() :
     col6.image(glob_form,use_column_width=True)
     col8.subheader('Keywords')
     col8.image(glob_kw2,use_column_width=True)
+     
    
-    
-   
-                  
+                 
 def page_competence  ():
+    st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)
     st.header('Compétences')
     st.text('')
     st.text('')
     st.image(comp_duo,width=600) 
     st.image(comp_ico,width=600)  
 
-    
-def page_formation  ():  
+   
+def page_formation  (): 
+    st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)
     st.header('Formations')
     st.text('')
     st.text('')
@@ -99,6 +102,7 @@ def page_formation  ():
     
     
 def page_experience():
+    st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)
     st.header('Expériences')
     st.text('')
     st.text('')
@@ -442,14 +446,17 @@ def page_experience():
         if top_but:
             st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)   
 
+
 def page_interet():
+    st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)
     st.header('Intérets')
     st.text('')
     st.text('')
     st.image(interet_mot,width=800)#use_column_width=True)
     
-       
+      
 def page_media():
+    st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)
     st.header('Médias')
     st.text('')
     
@@ -487,14 +494,14 @@ def page_media():
     
     st.text('')        
     st.text('')
-    media_yt_f = open('video/YT.mp4', 'rb')
-    media_yt = media_yt_f.read()
-
+    
     st.video(media_yt)
     col1, col2, col3  = st.beta_columns((4,1,4))
     col2.markdown(yt, unsafe_allow_html=True)  
+
             
 def page_publi():
+    st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)
     st.header('Publications')
     st.text('')
     br=('[**Brevet**](https://drive.google.com/file/d/1RZVpIPAJiq4zO9LPjO2_ahqiKJrSqQ2A/view?usp=sharing)')
@@ -521,18 +528,39 @@ def page_publi():
     st.text('')        
     st.text('')  
 
+### General:
+def catego(option):
+
+    if option =='Accueil':
+        page_accueille()
+        
+    elif option == 'Compétences' :
+        page_competence()    
+
+    elif option == 'Formations' :
+        page_formation()      
+
+    elif option == 'Expériences' :
+        page_experience()      
+
+    elif option == 'Intérets' :
+        page_interet()  
+
+    elif option == 'Publications' :
+        page_publi()  
+
+    elif option == 'Médias' :
+        page_media() 
     
 ### Display :
-    
-st.sidebar.image(profil_img)
+st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)    
+st.sidebar.image(profil_img,width=220)
 st.sidebar.title('Jean-Benoît DENIS')
 st.sidebar.subheader("Ingénieur Data Scientist")
-st.sidebar.text('')
 st.sidebar.write('31 ans - Permis B')
 st.sidebar.write(':round_pushpin:[4 Rue Hector Blanchet 38500 Voiron](https://goo.gl/maps/E8iCnmAg6AetDBy76)')
 st.sidebar.write(':telephone_receiver: 06 29 07 69 72')
 st.sidebar.write(':e-mail: [jeanbenoitdenis@gmail.com](mailto:jeanbenoitdenis@gmail.com)')
-st.sidebar.text('')
 
 option = st.sidebar.selectbox('Navigation',['Accueil',
                                             'Compétences',
@@ -543,29 +571,8 @@ option = st.sidebar.selectbox('Navigation',['Accueil',
                                             'Médias'
                                             ])      
 
-
-
-if option =='Accueil':
-    page_accueille()
     
-elif option == 'Compétences' :
-    page_competence()    
+catego(option)   
 
-elif option == 'Formations' :
-    page_formation()      
-
-elif option == 'Expériences' :
-    page_experience()      
-
-elif option == 'Intérets' :
-    page_interet()  
-
-elif option == 'Publications' :
-    page_publi()  
-
-elif option == 'Médias' :
-    page_media()   
-    
-    
 ####################################################################    
 
