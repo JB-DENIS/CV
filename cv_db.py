@@ -98,7 +98,7 @@ def page_formation  ():
     st.header('Formations')
     st.text('')
     st.text('')
-    st.image(form_road,width=800)
+    st.image(form_road,,use_column_width=True)#width=800)
     
     
 def page_experience():
