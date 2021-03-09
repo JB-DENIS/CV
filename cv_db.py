@@ -64,9 +64,9 @@ media_yt = media_yt_f.read()
 
 def page_accueille() :
     st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)    
-    st.markdown("<h1 style='text-align: center;'>Bienvenue sur mon CV intéractif</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Bienvenue sur mon CV interactif</h1>", unsafe_allow_html=True)
 
-    st.info(' Choisissez une catégorie dans le menu **_Navigation_** à gauche.')  
+    st.info(' Choisissez une catégorie dans le menu déroulant **_Navigation_** à gauche.')  
    
     col1, col2, col3  = st.beta_columns((2,0.2,2.8))
     col1.subheader('Compétences')
@@ -130,7 +130,7 @@ def page_experience():
         st.text('')
         col13, col14 = st.beta_columns((3,1))
         col13.subheader('Contexte')
-        col13.write('La volonté de partir en formation Data Scientist vient du constat, fait lors de mes diverses expériences professionnelles, que les datas ont investi tous cœur de métier. La pertinence et la puissance d’utiliser ces datas pour comprendre et prédire des comportements sont apparues comme une suite logique à mon parcours professionnel et ainsi acquérir un nouvel outil polyvalent.')
+        col13.write('La volonté de partir en formation Data Scientist vient du constat, fait lors de mes diverses expériences professionnelles, que les datas ont investi tous les cœurs de métier. La pertinence et la puissance d’utiliser ces datas pour comprendre et prédire des comportements sont apparues comme une suite logique à mon parcours professionnel et ainsi acquérir un nouvel outil polyvalent.')
         col14.image(exp_data_oc,use_column_width=True)
         
         st.subheader('Missions')
@@ -139,7 +139,7 @@ def page_experience():
         st.write('Exemples de projets réalisés :')
         st.text('')
         col15, col16 = st.beta_columns((1,1))
-        col15.write('**_Anticipation de consommation et émission de bâtiments_** ')
+        col15.write('**_Anticipation de la consommation et des émissions de bâtiments_** ')
         col15.write('Utiliser des données recueillies auprès d’immeubles de nouvelle génération afin de modéliser et prédire les consommations énergétiques et émissions de gaz à effet de serres en fonction du type de bâtiment.')
         col16.write('**_Segmentation des clients d\'un site d\'e-commerce _** ')
         col16.write('Réaliser un clustering d’utilisateurs d’un site d’e-commerce afin d’établir des actions commerciales ciblées.')
@@ -185,7 +185,7 @@ def page_experience():
         st.text('')
         col13, col14 = st.beta_columns((2.5,1))
         col13.subheader('Contexte')
-        col13.write('La production d’énergie par l’éolien représentait 6.3% du parc français en 2019 et ne cesse d’augmenter. Cette diversification des moyens de production d’énergie pose de nouveaux enjeux notamment au niveau environnemental. En effet une seule éolienne comprend une grande quantité de Terres Rares, éléments critiques en fort épuisement et principalement produits en Chine. Cet enjeu a nourrit la volonté de lancer le projet de création de la start-up RECUP’TR afin de développer un procédé propre et local de recyclage des Terres Rares contenues dans les aimants permanents d’éoliennes.')
+        col13.write('La production d’énergie par l’éolien représentait 6.3% du parc français en 2019 et ne cesse d’augmenter. Cette diversification des moyens de production d’énergie pose de nouveaux enjeux notamment au niveau environnemental. En effet une seule éolienne comprend une grande quantité de Terres Rares, éléments critiques en fort épuisement et principalement produits en Chine. Cet enjeu a nourri la volonté de lancer le projet de création de la start-up RECUP’TR afin de développer un procédé propre et local de recyclage des Terres Rares contenues dans les aimants permanents d’éoliennes.')
         col14.image(exp_sc_broyeur,use_column_width=True)
         
         st.subheader('Missions')
@@ -333,7 +333,7 @@ def page_experience():
         st.text('')
         col15, col16 = st.beta_columns((1,1))
         col15.write('**_Essais techniques sur banc d\'essai_** ')
-        col16.write('**_Contrôle qualité produit_** ')
+        col16.write('**_Contrôle qualité produits_** ')
         
         st.text('')
         col17, col18 = st.beta_columns((1,1))
