@@ -89,8 +89,8 @@ def page_competence  ():
     st.header('Compétences')
     st.text('')
     st.text('')
-    st.image(comp_duo,width=600) 
-    st.image(comp_ico,width=600)  
+    st.image(comp_duo,use_column_width=True)#width=600) 
+    st.image(comp_ico,use_column_width=True)#width=600)  
 
    
 def page_formation  (): 
