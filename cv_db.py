@@ -9,8 +9,8 @@ import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image 
 
-st.set_page_config(layout="centered")
-
+#st.set_page_config(layout="centered")
+st.set_page_config(layout="wide")
 
 
 ### Chargement des images :
@@ -62,7 +62,7 @@ media_yt = media_yt_f.read()
 
 ### Pages
 
-def page_accueille() :
+def page_accueille() : 
     st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)    
     st.markdown("<h1 style='text-align: center;'>Bienvenue sur mon CV interactif</h1>", unsafe_allow_html=True)
 
@@ -98,7 +98,7 @@ def page_formation  ():
     st.header('Formations')
     st.text('')
     st.text('')
-    st.image(form_road,width=900)
+    st.image(form_road,use_column_width=True)#,width=900)
     
     
 def page_experience():
@@ -113,7 +113,7 @@ def page_experience():
     col2.image(exp_chimie,use_column_width=True)
     col3.image(exp_open,use_column_width=True)
     
-    col4, col5, col6, col7, col8, col9  = st.beta_columns((0.5,1,0.35,1,0.45,1))
+    col4, col5, col6, col7, col8, col9  = st.beta_columns((0.5,1,0.5,1,0.5,1))#((0.5,1,0.35,1,0.45,1))
     bouton1=col5.button('Data')
     bouton2=col7.button('Science')
     bouton3=col9.button('Diverses')
@@ -450,9 +450,7 @@ def page_experience():
 def page_interet():
     st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)
     st.header('Intérets')
-    st.text('')
-    st.text('')
-    st.image(interet_mot,width=800)#use_column_width=True)
+    st.image(interet_mot,use_column_width=True)
     
       
 def page_media():
@@ -471,12 +469,12 @@ def page_media():
     st.text('')
     st.text('')
     
-    col4, col5, col6, col7, col8, col9, col10 = st.beta_columns((0.3,1,0.05,1,0.3,1,0.04))
-    col5.image(media_cv,width=125)
-    col7.image(media_lm,width=125)
-    col9.image(media_lr,width=125)
+    col4, col5, col6, col7, col8, col9, col10 = st.beta_columns((0.5,1,0.5,1,0.5,1,0.5))
+    col5.image(media_cv.resize((125,150)),use_column_width=True)#,width=125)
+    col7.image(media_lm.resize((125,150)),use_column_width=True)#,width=125)
+    col9.image(media_lr.resize((125,150)),use_column_width=True)#,width=125)
         
-    col4, col5, col6, col7, col8, col9, col10 = st.beta_columns((0.59,1,0.05,1,0.3,1,0.04))
+    #col4, col5, col6, col7, col8, col9, col10 = st.beta_columns((0.5,1,0.5,1,0.5,1,0.5))
     col5.markdown(cv, unsafe_allow_html=True)
     col7.markdown(lm, unsafe_allow_html=True)
     col9.markdown(lr, unsafe_allow_html=True)    
@@ -484,11 +482,11 @@ def page_media():
     st.text('')        
     st.text('')        
         
-    col4, col5, col6, col7, col8= st.beta_columns((0.8,1,0.2,1,0.6))
-    col5.image(media_git,width=125)
-    col7.image(media_linkedin,width=125)
+    col4, col5, col6, col7, col8= st.beta_columns((1,0.5,1,0.5,1))
+    col5.image(media_git,use_column_width=True)
+    col7.image(media_linkedin,use_column_width=True)
           
-    col4, col5, col6, col7, col8= st.beta_columns((1.3,1,0.5,1,0.8))
+    #col4, col5, col6, col7, col8= st.beta_columns((1,0.5,1,0.5,1))
     col5.markdown(git, unsafe_allow_html=True)
     col7.markdown(lin, unsafe_allow_html=True)
     
@@ -513,18 +511,27 @@ def page_publi():
     st.text('')
     st.text('')
     
-    col4, col5, col6, col7 = st.beta_columns(4)
-    col4.image(publi_brevet,use_column_width=True)
-    col5.image(publi_poster,use_column_width=True)
-    col6.image(publi_these,use_column_width=True)
-    col7.image(publi_prix,width=220)
-        
-    col4, col5, col6, col7, col8, col9, col10, col11, col12 = st.beta_columns((0.6,1,0.9,1,0.9,1,0.9,1,0.0001))
-    col5.markdown(br, unsafe_allow_html=True)
-    col7.markdown(po, unsafe_allow_html=True)
-    col9.markdown(th, unsafe_allow_html=True) 
-    col11.markdown(pr, unsafe_allow_html=True)
     
+    
+    #col4, col5, col6,col7,col8 = st.beta_columns(5)
+    col4, col5, col6, col7, col8, col9, col10 = st.beta_columns((0.5,1,0.5,1,0.5,1,0.5))#((0.6,1,0.9,1,0.9,1,0.9,1,0.0001)) 
+    col5.image(publi_brevet,use_column_width=True)
+    col7.image(publi_poster,use_column_width=True)
+    col9.image(publi_these,use_column_width=True)
+          
+    col4, col5, col6, col7, col8, col9, col10 = st.beta_columns((0.5,1,0.5,1,0.5,1,0.5))#((0.6,1,0.9,1,0.9,1,0.9,1,0.0001)) 
+    col5.write(br, unsafe_allow_html=True)
+    col7.write(po, unsafe_allow_html=True)
+    col9.write(th, unsafe_allow_html=True) 
+    
+    
+    st.text('')        
+    st.text('')
+    st.text('')        
+    st.text('') 
+    col1,col2,col3=st.beta_columns(3)
+    col2.image(publi_prix,use_column_width=True)#width=220)
+    col2.write(pr)
     st.text('')        
     st.text('')  
 
@@ -571,8 +578,29 @@ option = st.sidebar.selectbox('Navigation',['Accueil',
                                             'Médias'
                                             ])      
 
-    
-catego(option)   
+
+
+
+st.markdown(
+        f"""
+<style>
+    .reportview-container .main .block-container{{
+        max-width: {2560}px;
+        padding-top: {0}rem;
+        padding-right: {5}rem;
+        padding-left: {5}rem;
+        padding-bottom: {0}rem;
+    }}
+    .reportview-container .main {{
+        color: {'black'};
+        background-color: {'white'};
+    }}
+</style>
+""",
+        unsafe_allow_html=True,
+    )
+ 
+catego(option)
 
 ####################################################################    
 
