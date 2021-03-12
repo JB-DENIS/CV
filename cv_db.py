@@ -9,14 +9,13 @@ import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image 
 
-#st.set_page_config(layout="centered")
-st.set_page_config(layout="wide")
+
 
 
 ### Chargement des images :
     
 img_size=(150,150) 
-   
+icone_img=Image.open('img/profil.jpg')
 profil_img=Image.open('img/profils2.png')
 
 comp_duo=Image.open('img/comp_duo.jpg')
@@ -59,6 +58,8 @@ glob_kw2=Image.open('img/glob_kw3.jpg')
 media_yt_f = open('video/YT.mp4', 'rb')
 media_yt = media_yt_f.read()
 
+#st.set_page_config(layout="centered")
+st.set_page_config(page_title='CV JB DENIS',layout="wide",page_icon=icone_img)
 
 ### Pages
 
