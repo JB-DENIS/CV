@@ -66,7 +66,7 @@ def page_accueille() :
     st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)    
     st.markdown("<h1 style='text-align: center;'>Bienvenue sur mon CV interactif</h1>", unsafe_allow_html=True)
 
-    st.info(' Choisissez une catégorie dans le menu déroulant _***Navigation***_ de la sidebar en bas à gauche.')  
+    st.info(' Choisissez une catégorie dans le menu déroulant _***Navigation***_ de la sidebar à gauche.')  
     
     st.subheader('_**Aperçu du contenu :**_')
     
