@@ -19,7 +19,7 @@ img_size=(150,150)
    
 profil_img=Image.open('img/profils2.png')
 
-comp_duo=Image.open('img/comp_duo2.jpg')
+comp_duo=Image.open('img/comp_duo.jpg')
 comp_ico=Image.open('img/comp_ico.jpg')
 
 form_road=Image.open('img/form_road2.jpg')
@@ -27,7 +27,7 @@ form_road=Image.open('img/form_road2.jpg')
 exp_data=Image.open('img/exp_data.jpg').resize(img_size)
 exp_chimie=Image.open('img/exp_chimie.jpg').resize(img_size)
 exp_open=Image.open('img/exp_open.jpg').resize(img_size)
-exp_data_oc=Image.open('img/exp_data_oc.jpg').resize((240,200))
+exp_data_oc=Image.open('img/exp_data_oc.jpg').resize((240,180))
 exp_sc_broyeur=Image.open('img/exp_sc_broy.jpg').resize(img_size)
 exp_sc_four=Image.open('img/exp_sc_four.jpg').resize(img_size)
 exp_sc_laser=Image.open('img/exp_sc_laser.jpg')
@@ -50,7 +50,7 @@ media_lr=Image.open('img/media_lr.jpg')
 media_git=Image.open('img/media_git.jpg')
 media_linkedin=Image.open('img/media_linkedin.jpg')
 
-glob_comp=Image.open('img/glob_comp.jpg')
+glob_comp=Image.open('img/glob_comp2.jpg')
 glob_int=Image.open('img/glob_int.jpg')
 glob_exp=Image.open('img/glob_exp.jpg')
 glob_form=Image.open('img/glob_form.jpg')
@@ -66,8 +66,10 @@ def page_accueille() :
     st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)    
     st.markdown("<h1 style='text-align: center;'>Bienvenue sur mon CV interactif</h1>", unsafe_allow_html=True)
 
-    st.info(' Choisissez une catégorie dans le menu déroulant **_Navigation_** à gauche.')  
-   
+    st.info(' Choisissez une catégorie dans le menu déroulant _***Navigation***_ de la sidebar en bas à gauche.')  
+    
+    st.subheader('_**Aperçu du contenu :**_')
+    
     col1, col2, col3  = st.beta_columns((2,0.2,2.8))
     col1.subheader('Compétences')
     col1.image(glob_comp,use_column_width=True)
@@ -75,7 +77,7 @@ def page_accueille() :
     col3.image(glob_exp,use_column_width=True)
     
     col4, col5, col6, col7, col8 = st.beta_columns((3,0.00000001,1.1,0.2,1.4))
-    col4.subheader('Intérets')
+    col4.subheader('Intérêts')
     col4.image(glob_int,use_column_width=True)
     col6.subheader('Formations')
     col6.image(glob_form,use_column_width=True)
@@ -326,7 +328,7 @@ def page_experience():
         st.text('')
         col13, col14 = st.beta_columns((2.5,1))
         col13.subheader('Contexte')
-        col13.write('Dans une volonté d’ouverture à l’internationale, cette expérience professionnelle s’est tenue à Singapour à un poste de technicien sur chaîne de production d\'enzyme pour le textile.')
+        col13.write('Dans une volonté d’ouverture à l’International, cette expérience professionnelle s’est tenue à **Singapour** à un poste de technicien sur chaîne de production d\'enzyme pour le textile.')
         col14.image(exp_sc_enz,width=70)
         
         st.subheader('Missions')
@@ -368,7 +370,7 @@ def page_experience():
         st.text('')
         col13, col14 = st.beta_columns((2.5,1))
         col13.subheader('Contexte')
-        col13.write('Achat d\'une maison à rénover.')
+        col13.write('Suite à mon CDD, je suis devenu propriétaire d\'une maison datant des années 1930. Nécessitant de gros travaux d\'aménagements et de mises à niveau, je me suis lancé dans sa rénovation complète.')
         col14.image(exp_diver_maison,use_column_width=True)
                        
         st.subheader('Réalisations')
@@ -391,7 +393,7 @@ def page_experience():
         st.text('')
         col13, col14 = st.beta_columns((2.5,1))
         col13.subheader('Contexte')
-        col13.write('Opportunité de découvrir le Japon tout en travaillant dans un centre d\'activités.')
+        col13.write('Opportunité de découvrir le **Japon** tout en travaillant dans un centre d\'activités.')
         col14.image(exp_diver_jap,use_column_width=True)
         
         st.subheader('Missions')
@@ -449,7 +451,7 @@ def page_experience():
 
 def page_interet():
     st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)
-    st.header('Intérets')
+    st.header('Intérêts') 
     st.image(interet_mot,use_column_width=True)
     
       
@@ -492,7 +494,7 @@ def page_media():
     
     st.text('')        
     st.text('')
-    
+    st.markdown("<h5 style='text-align: center; color: gray;'>Attention, le son est automatiquement au maximum</h5>", unsafe_allow_html=True)
     st.video(media_yt)
     col1, col2, col3  = st.beta_columns((4,1,4))
     col2.markdown(yt, unsafe_allow_html=True)  
@@ -523,7 +525,9 @@ def page_publi():
     col5.write(br, unsafe_allow_html=True)
     col7.write(po, unsafe_allow_html=True)
     col9.write(th, unsafe_allow_html=True) 
-    
+    col5.write('_Polymère comme matériau d\'électrode pour des batteries secondaires au lithium._ Réf : **WO 2013156899 A1**')
+    col7.write('_Influence of impurities on the performance of metal hydride_. MH2014, Manchester, UK, 2014.')
+    col9.write('_Étude de l\'influence d\'éléments d\'addition sur les propriétés de stockage de l\'hydrogène dans le système Ti-V-Fe._')
     
     st.text('')        
     st.text('')
@@ -532,6 +536,7 @@ def page_publi():
     col1,col2,col3=st.beta_columns(3)
     col2.image(publi_prix,use_column_width=True)#width=220)
     col2.write(pr)
+    col2.write('1er prix : _Présentation Thèse CEA_, organisé au Liten')
     st.text('')        
     st.text('')  
 
@@ -550,7 +555,7 @@ def catego(option):
     elif option == 'Expériences' :
         page_experience()      
 
-    elif option == 'Intérets' :
+    elif option == 'Intérêts' :
         page_interet()  
 
     elif option == 'Publications' :
@@ -573,7 +578,7 @@ option = st.sidebar.selectbox('Navigation',['Accueil',
                                             'Compétences',
                                             'Formations',
                                             'Expériences',
-                                            'Intérets',
+                                            'Intérêts',
                                             'Publications',
                                             'Médias'
                                             ])      
