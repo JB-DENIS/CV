@@ -460,7 +460,7 @@ def page_media():
     st.header('Médias')
     st.text('')
     
-    cv=('[**CV**](https://drive.google.com/file/d/1m6RCFIE46yZG5iUjaUsNpnvu5DaDBths/view?usp=sharing)')
+    cv=('[**CV**](https://drive.google.com/file/d/1oSBKeLdvIjgydBnC_t6o01fb9ucCaomL/view?usp=sharing)')
     lm=('[**Lettre de motivation**](https://drive.google.com/file/d/1hpbAiw7URmtNtQo_BdIHHOX12_Zpb3GC/view?usp=sharing)')
     lr=('[**Lettre de recommandation**](https://drive.google.com/file/d/1UoU_yFMkkjtdxRiluyNAN9NfIWck2mOk/view?usp=sharing)')
     git=('[**GitHub**](https://github.com/JB-DENIS)')
