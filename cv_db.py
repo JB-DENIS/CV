@@ -17,6 +17,7 @@ from PIL import Image
 img_size=(150,150) 
 icone_img=Image.open('img/profil.jpg')
 profil_img=Image.open('img/profils2.png')
+bar_img=Image.open('img/bar.jpg')
 
 comp_duo=Image.open('img/comp_duo.jpg')
 comp_ico=Image.open('img/comp_ico.jpg')
@@ -62,13 +63,13 @@ media_yt = media_yt_f.read()
 st.set_page_config(page_title='CV JB DENIS',layout="wide",page_icon=icone_img)
 
 ### Pages
-
+  
 def page_accueille() : 
     st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)    
     st.markdown("<h1 style='text-align: center;'>Bienvenue sur mon CV interactif</h1>", unsafe_allow_html=True)
 
-    st.info(' Choisissez une catégorie dans le menu déroulant _***Navigation***_ de la sidebar à gauche.')  
-    
+    st.info(' Dans le menu déroulant _***Navigation***_ de la sidebar, choisissez une catégorie pour accéder au contenu.')  
+   
     st.subheader('_**Aperçu du contenu :**_')
     
     col1, col2, col3  = st.beta_columns((2,0.2,2.8))
@@ -84,7 +85,8 @@ def page_accueille() :
     col6.image(glob_form,use_column_width=True)
     col8.subheader('Keywords')
     col8.image(glob_kw2,use_column_width=True)
-     
+
+    return option
    
                  
 def page_competence  ():
@@ -568,21 +570,28 @@ def catego(option):
 ### Display :
 st.markdown("""<a id="top"></a>""",unsafe_allow_html=True)    
 st.sidebar.image(profil_img,width=220)
-st.sidebar.title('Jean-Benoît DENIS')
-st.sidebar.subheader("Ingénieur Data Scientist")
-st.sidebar.write('31 ans - Permis B')
-st.sidebar.write(':round_pushpin:[4 Rue Hector Blanchet 38500 Voiron](https://goo.gl/maps/E8iCnmAg6AetDBy76)')
-st.sidebar.write(':telephone_receiver: 06 29 07 69 72')
-st.sidebar.write(':e-mail: [jeanbenoitdenis@gmail.com](mailto:jeanbenoitdenis@gmail.com)')
+st.sidebar.title('Jean-Benoît DENIS, Ph.D')
+st.sidebar.subheader("Data Scientist - Ingénieur")
 
-option = st.sidebar.selectbox('Navigation',['Accueil',
+st.sidebar.image(bar_img,use_column_width=True)
+st.sidebar.markdown("<h1 style='text-align: center; color: blue;'>Navigation</h1>", unsafe_allow_html=True)
+option = st.sidebar.selectbox('',['Accueil',
                                             'Compétences',
                                             'Formations',
                                             'Expériences',
                                             'Intérêts',
                                             'Publications',
                                             'Médias'
-                                            ])      
+                                            ]) 
+st.sidebar.text('')
+st.sidebar.text('')                                            
+st.sidebar.image(bar_img,use_column_width=True)
+
+
+#st.sidebar.write('31 ans - Permis B')
+st.sidebar.write(':telephone_receiver: 06 29 07 69 72')
+st.sidebar.write(':e-mail: [jeanbenoitdenis@gmail.com](mailto:jeanbenoitdenis@gmail.com)')
+st.sidebar.write(':round_pushpin:[4 Rue Hector Blanchet 38500 Voiron](https://goo.gl/maps/E8iCnmAg6AetDBy76)')
 
 
 
