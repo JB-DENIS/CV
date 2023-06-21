@@ -1,4 +1,72 @@
 EXP_DICT = {
+    "Ingénieur Data Scientist": {
+        "type_exp": "Data",
+        "body": {
+            "title": "Ingénieur Data Science",
+            "subtitle": "",
+            "date": "2022 - Aujourd'hui",
+            "context": """ESN spécialisée dans la conception, le développement et la maintenabilité de solutions informatiques, techniques et industrielles sur des systèmes complexes et critiques.""",
+            "missions": {
+                "resume": "Ingénieur en Data Science en mission chez le client et réalisation de projets Data en interne à Kaizen Solution",
+                "examples": {
+                    "Mission Thales – Connected Radiology :": "Développement d'algorithmes de parsing de logs et d'alerting pour des systèmes de radiologie. Conception d'outils de dashboarding pour de l'aide à la maintenance. POC NLP (Anonymisation automatique, clustering de logs)""",
+                    "Kaizen solutions - Horizon:": "Computer Vision / Objects Tracking pour la reconnaissance de montagnes sur image",
+                    "Kaizen solutions - Projets internes" : "POC d’un outil de parsing automatique de CV. Mise en place d’un Toolkit Data"
+                }
+            },
+            "realisations": [
+                "Développement Python",
+                "Mise en place environnement dév (Poetry, linter, etc.)"
+                "ElasticSearch, kibana",
+                "Grafana",
+                "Data Analyse",
+                "Machine learning",
+                "Algorithmie",
+                "Veille technologique",
+                "POC NLP",
+                "POC Computer Vision",
+                "Docker, Kubernetes",
+                "Git"      
+            ],
+            "picture": "img/exp_kzn.jpg"
+        }
+    },
+    "Ingénieur RD Data Scientist": {
+        "type_exp": "Data",
+        "body": {
+            "title": "Ingénieur R&D Data Science",
+            "subtitle": "",
+            "date": "2021-2022",
+            "context": """Adobis Group propose une plateforme de Data Virtualisation et de Data Viz. Afin de répondre
+aux besoins croissants de ses clients en Data analyse et Data Science, un nouveau module
+complémentaire au logiciel actuel est alors développé.""",
+            "missions": {
+                "resume": "Développer une solution low code / no code permettant de réaliser des opérations de data analyse, data science et data visualisation",
+                "examples": {
+                    "Conception et développement de modules Low code/No code": "POC data analyse et data science pour du machine learning supervisé et Notebooks pré-configurés",
+                    "Développement de POCs et solutions Data Viz pour des Use-cases clients": "ex: Parsing automatique de donnée pour la valorisation des données de facturation des hopitaux",
+                    "Développement de briques fonctionnelles": "ex: Extraction et optimisation de la chaine de dépendance des blocks opérationnels",
+                    "Encadrement d’étudiants en Data Science": "Alternant et stagiaire en Data Science"
+                }
+            },
+            "realisations": [
+                "Développement Python",
+                "Notebooks préconfigurés",
+                "Data Mining, Etude statistique",
+                "Machine learning",
+                "Algorithmie",
+                "Benchmark",
+                "Design software",
+                "Backend",
+                "Bases de donnée",
+                "Tests unitaires",
+                "API",
+                "Git",
+                "Production de vidéos"
+            ],
+            "picture": "img/exp_adobe.jpg"
+        }
+    },
     "Apprenti Data Scientist": {
         "type_exp": "Data",
         "body": {
@@ -155,10 +223,51 @@ EXP_DICT = {
             "picture": "img/exp_sc_enz.jpg"
         }
     },
+    "datadojo": {
+        "type_exp": "Diverses",
+        "body": {
+            "title": "Atelier Data",
+            "subtitle": "Initiation au machine learning - Nutri-scorez vos aliments !",
+            "date": "2023",
+            "context": """Animation d'un atelier de découverte des algorithmes de machine learning usuels en travaillant sur la base de donner "Open Food Fact". Après une explication générale de la pipeline de travail, ces modèles sont présentés un à un puis implémentés pour déterminer automatiquement le NutriScore de produits alimentaires.""",
+            "missions": {
+                "resume": "",
+                "examples": {}
+            },
+            "realisations": [
+                "Organisation et Animation de l'atelier",
+                "Data analyse",
+                "Machine learning",
+                "Notebook pré-configuré (Voir Média)"
+                             ],
+            "picture": "img/exp_dojo.png"
+        }
+    },
+    "autoML": {
+        "type_exp": "Diverses",
+        "body": {
+            "title": "WebApp Auto-Data",
+            "subtitle": "",
+            "date": "2022 - aujourd'hui",
+            "context": "Création d'une WebApp proposant des outils de data science pour de l’auto-EDA et de l’auto-ML (Voir Média)",
+            "missions": {
+                "resume": "",
+                "examples": {}
+            },
+            "realisations": ["Développement python - API",
+                             "Librairie Data analyse",
+                             "Librairie Machine learning",
+                             "Librairie Data Viz",
+                             "Interface (Streamlit)"
+                             "Docker"
+                             ],
+            "picture": "img/exp_automl.jpg"
+        }
+    },
     "Projet césure - Artisanat": {
         "type_exp": "Diverses",
         "body": {
-            "title": "Projet césure - Artisanat",
+            "title": "Projet césure - Artisanat - YouTube",
             "subtitle": "Rénovation d’une maison de A à Z",
             "date": "2019-2020",
             "context": "Suite à mon CDD, je suis devenu propriétaire d'une maison datant des années 1930. Nécessitant de gros travaux d'aménagements et de mises à niveau, je me suis lancé dans sa rénovation complète.",
@@ -231,3 +340,18 @@ TOOLS_DICT = {
     "Env (Windows, Ubuntu, Fedora)": 7,
     "Méthodologie (Agile, Scrum, Kanban, SMART, Gantt, ...)": 5
 }
+
+
+COMP_DICT = dict(
+    character=["Humaines", "Management", "Communication", "Relations clients", "Reporting", "Gestion de projets", "Montage", "Roadmap", "Cahier des Charges", "RoI", "Agile", "Data", "Data analyse", "Data science", "Data Viz", "Développement Python", "Base de donnée"],
+    parent=["", "Humaines", "Humaines", "Humaines", "Humaines", "", "Gestion de projets", "Gestion de projets", "Gestion de projets", "Gestion de projets", "Gestion de projets", "", "Data","Data","Data","Data","Data"],
+    value=[10, 4, 6, 5,8, 10, 6, 7, 5, 4,3, 12,12,12,10,6,4])
+
+SOFT_LIST = [
+    "Autodidacte",
+    "Organisé",
+    "Rigoureux",
+    "Autonome",
+    "Curieux",
+    "Proactif"
+    ]

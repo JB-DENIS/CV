@@ -24,13 +24,13 @@ class NewExperience():
         # exp = st.container()
         with st.expander(label=f"**{self.title}**"):
             # Title
-            col1, col2, col3 = st.columns((2, 0.5, 1))
+            col1, col2, col3 = st.columns((2, 0.8, 1))
             col1.header(self.title)
             col3.header(self.date)
             st.subheader(f"_{self.subtitle}_")
 
             # Context
-            col1, col3 = st.columns((2, 1))
+            col1, col2, col3 = st.columns((2, 0.2, 1))
             col1.subheader("Contexte")
             col1.markdown(
                 f'<div style="text-align: justify;">{self.context}<div>', unsafe_allow_html=True)
@@ -48,21 +48,21 @@ class NewExperience():
                 st.markdown(
                     f'<div style="text-align: justify;">{self.missions.get("resume")}<div>', unsafe_allow_html=True)
                 st.text("")
-                col1, col2 = st.columns(2)
+                col1, col2, col3 = st.columns((1, 0.2, 1))
                 n = 0
                 for k, v in self.missions.get("examples").items():
 
                     if (n % 2) == 0:
-                        col1, col2 = st.columns(2)
+                        col1, col2, col3 = st.columns((1, 0.2, 1))
                         col1.write(f"**_{k}_**")
                         col1.markdown(
                             f'<div style="text-align: justify;">{v}<div>', unsafe_allow_html=True)
                         col1.text("")
                     else:
-                        col2.write(f"_**{k}**_")
-                        col2.markdown(
+                        col3.write(f"_**{k}**_")
+                        col3.markdown(
                             f'<div style="text-align: justify;">{v}<div>', unsafe_allow_html=True)
-                        col2.text("")
+                        col3.text("")
 
                     n += 1
                 st.text("")
@@ -86,7 +86,7 @@ def experience_page(exp: dict):
                 unsafe_allow_html=True)
 
     tab1, tab2, tab3 = st.tabs(
-        ["Data", "Science", "Diverses"])
+        ["Data", "Sciences", "Projets personnels"])
 
     for k, v in exp.items():
 

@@ -22,6 +22,9 @@ def medias_page():
     git = ('[**GitHub**](https://github.com/JB-DENIS)')
     lin = ('[**LinkedIn**](https://linkedin.com/in/jean-benoît-denis-38000)')
     yt = ('[**YouTube**](https://www.youtube.com/channel/UC1i8IXzTvu7rhaXBCLMaDmQ)')
+    nb_nutriscore = (
+        '[**Atelier Data**](https://github.com/JB-DENIS/atelier_ML)')
+    automl = ('[**Auto-Data**](https://github.com/JB-DENIS/auto-ML)')
 
     st.markdown("<h6 style='text-align: center; color: gray;'>Cliquez sur un média pour accéder au contenu</h5>",
                 unsafe_allow_html=True)
@@ -45,13 +48,18 @@ def medias_page():
     st.text('')
     st.text('')
 
-    col4, col5, col6, col7, col8 = st.columns((1, 0.5, 1, 0.5, 1))
+    col32, col4, col5, col6, col7, col33 = st.columns(
+        (1, 0.5, 0.5, 0.5, 0.5, 1))
+    col4.image(media_linkedin, use_column_width=True)
     col5.image(media_git, use_column_width=True)
-    col7.image(media_linkedin, use_column_width=True)
+    col6.image("img/exp_dojo.png", use_column_width=True)
+    col7.image("img/exp_automl.jpg")  # , use_column_width=True)
 
     # col4, col5, col6, col7, col8= st.columns((1,0.5,1,0.5,1))
+    col4.markdown(lin, unsafe_allow_html=True)
     col5.markdown(git, unsafe_allow_html=True)
-    col7.markdown(lin, unsafe_allow_html=True)
+    col6.markdown(nb_nutriscore, unsafe_allow_html=True)
+    col7.markdown(automl, unsafe_allow_html=True)
 
     st.text('')
     st.text('')

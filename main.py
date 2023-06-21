@@ -2,7 +2,7 @@
 import streamlit as st
 from acceuil import accueille_page
 from competences import competences_page
-from data_dict import EXP_DICT, TOOLS_DICT
+from data_dict import COMP_DICT, EXP_DICT, SOFT_LIST, TOOLS_DICT
 from experience import experience_page
 from formations import formations_page
 from interets import interets_page
@@ -16,7 +16,11 @@ def catego(option):
         accueille_page()
 
     elif option == 'Compétences':
-        competences_page(data=TOOLS_DICT)
+        competences_page(
+            data_tools=TOOLS_DICT,
+            data_comp=COMP_DICT,
+            data_soft=SOFT_LIST
+        )
 
     elif option == 'Formations':
         formations_page()
@@ -41,7 +45,7 @@ st.set_page_config(page_title='CV JB DENIS',
 st.markdown("""<a id="top"></a>""", unsafe_allow_html=True)
 st.sidebar.image("img/profils2.png", width=220)
 st.sidebar.title('Jean-Benoît DENIS, Ph.D')
-st.sidebar.subheader("Data Scientist - Ingénieur")
+st.sidebar.subheader("Ingénieur Data Scientice")
 
 st.sidebar.image('img/bar.jpg', use_column_width=True)
 st.sidebar.markdown(
