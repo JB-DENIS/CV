@@ -16,11 +16,11 @@ def medias_page():
     st.header('Médias')
     st.text('')
 
-    cv = ('[**CV**](https://drive.google.com/file/d/1oSBKeLdvIjgydBnC_t6o01fb9ucCaomL/view?usp=sharing)')
+    cv = ('[**CV**](https://drive.google.com/file/d/124jtZ2eEXIskv2kQeBIS00vXFeShkmDz/view?usp=sharing)')
     lm = ('[**Lettre de motivation**](https://drive.google.com/file/d/1hpbAiw7URmtNtQo_BdIHHOX12_Zpb3GC/view?usp=sharing)')
     lr = ('[**Lettre de recommandation**](https://drive.google.com/file/d/1UoU_yFMkkjtdxRiluyNAN9NfIWck2mOk/view?usp=sharing)')
     git = ('[**GitHub**](https://github.com/JB-DENIS)')
-    lin = ('[**LinkedIn**](https://linkedin.com/in/jean-benoît-denis-38000)')
+    lin = ('[**LinkedIn**](https://www.linkedin.com/in/jbdenis/)')
     yt = ('[**YouTube**](https://www.youtube.com/channel/UC1i8IXzTvu7rhaXBCLMaDmQ)')
     nb_nutriscore = (
         '[**Atelier Data**](https://github.com/JB-DENIS/atelier_ML)')
