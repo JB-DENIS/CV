@@ -45,7 +45,7 @@ st.set_page_config(page_title='CV JB DENIS',
 st.markdown("""<a id="top"></a>""", unsafe_allow_html=True)
 st.sidebar.image("img/profils2.png", width=220)
 st.sidebar.title('Jean-Benoît DENIS, Ph.D')
-st.sidebar.subheader("Ingénieur Data Scientice")
+st.sidebar.subheader("Ingénieur Data Scientist")
 
 st.sidebar.image('img/bar.jpg', use_column_width=True)
 st.sidebar.markdown(
