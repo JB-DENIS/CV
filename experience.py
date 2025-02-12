@@ -1,16 +1,17 @@
 import streamlit as st
 
 
-class NewExperience():
-    def __init__(self,
-                 title: str,
-                 subtitle: str,
-                 date: str,
-                 context: str,
-                 missions: dict,
-                 realisations: list,
-                 picture: str
-                 ):
+class NewExperience:
+    def __init__(
+        self,
+        title: str,
+        subtitle: str,
+        date: str,
+        context: str,
+        missions: dict,
+        realisations: list,
+        picture: str,
+    ):
 
         self.title = title
         self.subtitle = subtitle
@@ -33,12 +34,14 @@ class NewExperience():
             col1, col2, col3 = st.columns((2, 0.2, 1))
             col1.subheader("Contexte")
             col1.markdown(
-                f'<div style="text-align: justify;">{self.context}<div>', unsafe_allow_html=True)
+                f'<div style="text-align: justify;">{self.context}<div>',
+                unsafe_allow_html=True,
+            )
             col3.text("")
             col3.text("")
             col3.text("")
             col3.text("")
-            col3.image(self.picture, use_column_width='auto')
+            col3.image(self.picture, use_container_width="auto")
             st.text("")
             # Mission
 
@@ -46,7 +49,9 @@ class NewExperience():
                 col1, col2 = st.columns(2)
                 col1.subheader("Missions")
                 st.markdown(
-                    f'<div style="text-align: justify;">{self.missions.get("resume")}<div>', unsafe_allow_html=True)
+                    f'<div style="text-align: justify;">{self.missions.get("resume")}<div>',
+                    unsafe_allow_html=True,
+                )
                 st.text("")
                 col1, col2, col3 = st.columns((1, 0.2, 1))
                 n = 0
@@ -56,18 +61,22 @@ class NewExperience():
                         col1, col2, col3 = st.columns((1, 0.2, 1))
                         col1.write(f"**_{k}_**")
                         col1.markdown(
-                            f'<div style="text-align: justify;">{v}<div>', unsafe_allow_html=True)
+                            f'<div style="text-align: justify;">{v}<div>',
+                            unsafe_allow_html=True,
+                        )
                         col1.text("")
                     else:
                         col3.write(f"_**{k}**_")
                         col3.markdown(
-                            f'<div style="text-align: justify;">{v}<div>', unsafe_allow_html=True)
+                            f'<div style="text-align: justify;">{v}<div>',
+                            unsafe_allow_html=True,
+                        )
                         col3.text("")
 
                     n += 1
                 st.text("")
             # Realisations
-            st.subheader('Réalisations')
+            st.subheader("Réalisations")
             for r in self.realisation:
 
                 st.write(f":black_small_square: {r}")
@@ -82,11 +91,12 @@ def experience_page(exp: dict):
     col2.image("img/exp_chimie.jpg", width=200)
     col3.image("img/exp_open.jpg", width=200)
     st.text("")
-    st.markdown("<h6 style='text-align: center; color: gray;'>Choisissez une catégorie</h5>",
-                unsafe_allow_html=True)
+    st.markdown(
+        "<h6 style='text-align: center; color: gray;'>Choisissez une catégorie</h5>",
+        unsafe_allow_html=True,
+    )
 
-    tab1, tab2, tab3 = st.tabs(
-        ["Data", "Sciences", "Projets personnels"])
+    tab1, tab2, tab3 = st.tabs(["Data", "Sciences", "Projets personnels"])
 
     for k, v in exp.items():
 

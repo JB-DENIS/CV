@@ -14,8 +14,8 @@ EXP_DICT = {
                     "Formation et encadrement": "Création de formations sur les IA génératives et participation à la création de la « Charte IA Kaizen ».",
                     "Missions clients (TDK Chirp)": "QA et évaluation hardware/software pour des capteurs ultrason.",
                     "Missions clients (TDK Wasabi)": "Évaluation de solutions Key Word Spotting et développement d’outils pour l’AudioLab.",
-                    "Missions clients (Thales Connected Radiology)": "Développement d’algorithmes de parsing de logs, dashboarding et POC NLP."
-                }
+                    "Missions clients (Thales Connected Radiology)": "Développement d’algorithmes de parsing de logs, dashboarding et POC NLP.",
+                },
             },
             "realisations": [
                 "Gestion de projet IA et Data",
@@ -28,12 +28,11 @@ EXP_DICT = {
                 "Computer Vision (Object Tracking)",
                 "Dashboarding et outils de visualisation",
                 "Podcasts et articles techniques",
-                "Gestion budgétaire"
+                "Gestion budgétaire",
             ],
-            "picture": "img/exp_kzn.jpg"
-        }
+            "picture": "img/exp_kzn.jpg",
+        },
     },
-    
     "Ingénieur RD Data Scientist": {
         "type_exp": "Data",
         "body": {
@@ -41,16 +40,16 @@ EXP_DICT = {
             "subtitle": "",
             "date": "2021-2022",
             "context": """Adobis Group propose une plateforme de Data Virtualisation et de Data Viz. Afin de répondre
-aux besoins croissants de ses clients en Data analyse et Data Science, un nouveau module
-complémentaire au logiciel actuel est alors développé.""",
+            aux besoins croissants de ses clients en Data analyse et Data Science, un nouveau module
+            complémentaire au logiciel actuel est alors développé.""",
             "missions": {
                 "resume": "Développer une solution low code / no code permettant de réaliser des opérations de data analyse, data science et data visualisation",
                 "examples": {
                     "Conception et développement de modules Low code/No code": "POC data analyse et data science pour du machine learning supervisé et Notebooks pré-configurés",
                     "Développement de POCs et solutions Data Viz pour des Use-cases clients": "ex: Parsing automatique de donnée pour la valorisation des données de facturation des hopitaux",
                     "Développement de briques fonctionnelles": "ex: Extraction et optimisation de la chaine de dépendance des blocks opérationnels",
-                    "Encadrement d’étudiants en Data Science": "Alternant et stagiaire en Data Science"
-                }
+                    "Encadrement d’étudiants en Data Science": "Alternant et stagiaire en Data Science",
+                },
             },
             "realisations": [
                 "Développement Python",
@@ -65,10 +64,10 @@ complémentaire au logiciel actuel est alors développé.""",
                 "Tests unitaires",
                 "API",
                 "Git",
-                "Production de vidéos"
+                "Production de vidéos",
             ],
-            "picture": "img/exp_adobe.jpg"
-        }
+            "picture": "img/exp_adobe.jpg",
+        },
     },
     "Apprenti Data Scientist": {
         "type_exp": "Data",
@@ -83,22 +82,23 @@ complémentaire au logiciel actuel est alors développé.""",
                     "Anticipation de la consommation et des émissions de bâtiments": "Utiliser des données recueillies auprès d’immeubles de nouvelle génération afin de modéliser et prédire les consommations énergétiques et émissions de gaz à effet de serres en fonction du type de bâtiment.",
                     "Segmentation des clients d'un site d'e-commerce": "Réaliser un clustering d’utilisateurs d’un site d’e-commerce afin d’établir des actions commerciales ciblées.",
                     "Classification automatique de biens de consommation": "Mise en place d’un outil de classification automatique de produits de consommation en fonction de leurs descriptifs (texte) et de leurs photos (visuel).",
-                    "Implémentation d’une métrique métier pour le secteur bancaire": "Construire une métrique métier pour la modélisation d’un score d’attribution de prêt bancaire, interprétation sur Dashboard et déploiement de l'API."
-                }
+                    "Implémentation d’une métrique métier pour le secteur bancaire": "Construire une métrique métier pour la modélisation d’un score d’attribution de prêt bancaire, interprétation sur Dashboard et déploiement de l'API.",
+                },
             },
-            "realisations": ["Data Mining, Etude statistique",
-                             "Pre-processing, feature engineering, réduction dimensionnelle (ACP)",
-                             "Machine learning supervisé : régression, kNN, SVM, Random Forest, XGBoost, LightGBM",
-                             "Machine learning non supervisé : Kmeans, DBScan, HAC, GMM",
-                             "Métrique métier, optimisation bayésienne, stacking",
-                             "Deep Learning, NLP (BoW, Tf-IDF, Embedding), visuel (BoVW, CNN, Transfert learning)",
-                             "Spark, AWS",
-                             "Déploiement API, Dashboard",
-                             "Analyse de résultats, reporting et vulgarisation",
-                             "GitHub rassemblant tous les projets"
-                             ],
-            "picture": "img/exp_data_oc.jpg"
-        }
+            "realisations": [
+                "Data Mining, Etude statistique",
+                "Pre-processing, feature engineering, réduction dimensionnelle (ACP)",
+                "Machine learning supervisé : régression, kNN, SVM, Random Forest, XGBoost, LightGBM",
+                "Machine learning non supervisé : Kmeans, DBScan, HAC, GMM",
+                "Métrique métier, optimisation bayésienne, stacking",
+                "Deep Learning, NLP (BoW, Tf-IDF, Embedding), visuel (BoVW, CNN, Transfert learning)",
+                "Spark, AWS",
+                "Déploiement API, Dashboard",
+                "Analyse de résultats, reporting et vulgarisation",
+                "GitHub rassemblant tous les projets",
+            ],
+            "picture": "img/exp_data_oc.jpg",
+        },
     },
     "Ingénieur de Recherche Entrepreneur": {
         "type_exp": "Science",
@@ -113,19 +113,20 @@ complémentaire au logiciel actuel est alors développé.""",
                     "Développement et amélioration du procédé de production": "",
                     "Gestion de projets / Management d’équipe technique": "",
                     "Entrepreneuriat": "",
-                    "Etude de marché et profils clients (Datas BPI France)": ""
-                }
+                    "Etude de marché et profils clients (Datas BPI France)": "",
+                },
             },
-            "realisations": ["Synthèse par broyeur planétaire, presse, traitement thermique sous H2, Extraction chimique",
-                             "DRX, MEB, Granulométrie, Bobine Supra, ATG, EPMA",
-                             "Rédaction du mode opératoire de production (Enveloppe SOLEAU)",
-                             "Réalisation des procédures de manipulation et de sécurité",
-                             "Conception et mise en place d’outils techniques",
-                             "Rendement triplé en fin de mission",
-                             "Preuve de concept opérationnelle"
-                             ],
-            "picture": "img/exp_sc_broy.jpg"
-        }
+            "realisations": [
+                "Synthèse par broyeur planétaire, presse, traitement thermique sous H2, Extraction chimique",
+                "DRX, MEB, Granulométrie, Bobine Supra, ATG, EPMA",
+                "Rédaction du mode opératoire de production (Enveloppe SOLEAU)",
+                "Réalisation des procédures de manipulation et de sécurité",
+                "Conception et mise en place d’outils techniques",
+                "Rendement triplé en fin de mission",
+                "Preuve de concept opérationnelle",
+            ],
+            "picture": "img/exp_sc_broy.jpg",
+        },
     },
     "Ingénieur doctorant": {
         "type_exp": "Science",
@@ -140,19 +141,20 @@ complémentaire au logiciel actuel est alors développé.""",
                     "Métallurgie, caractérisations physico-chimique": "",
                     "Manipulation de Gaz en zone ATEX": "",
                     "Gestion de projets, réunions, plan d'expérience, cahier des charges": "",
-                    "Conception bancs essai et outils techniques, maintenance": ""
-                }
+                    "Conception bancs essai et outils techniques, maintenance": "",
+                },
             },
-            "realisations": ["Elaboration d’alliages en four à induction – Frittages. Métallurgie, Hydrure sous pression",
-                             "DRX, MEB, EDX, EPMA, DSC, mesure PCT, cyclage",
-                             "Modélisation des lois de prédiction de volume de maille d'un alliage quinaire",
-                             "Réalisation d'un abaque PCT sur l'utilisation d'Al et Si dans un système TiVFe",
-                             "Procédure d'élaboration optimisée",
-                             "Manuscrit de thèse - Rapport sur les Energies (Voir **Publications**)",
-                             "**1er Prix Présentation de thèse** (Voir **Publications**)"
-                             ],
-            "picture": "img/exp_sc_four.jpg"
-        }
+            "realisations": [
+                "Elaboration d’alliages en four à induction – Frittages. Métallurgie, Hydrure sous pression",
+                "DRX, MEB, EDX, EPMA, DSC, mesure PCT, cyclage",
+                "Modélisation des lois de prédiction de volume de maille d'un alliage quinaire",
+                "Réalisation d'un abaque PCT sur l'utilisation d'Al et Si dans un système TiVFe",
+                "Procédure d'élaboration optimisée",
+                "Manuscrit de thèse - Rapport sur les Energies (Voir **Publications**)",
+                "**1er Prix Présentation de thèse** (Voir **Publications**)",
+            ],
+            "picture": "img/exp_sc_four.jpg",
+        },
     },
     "Ingénieur stagiaire": {
         "type_exp": "Science",
@@ -167,16 +169,17 @@ complémentaire au logiciel actuel est alors développé.""",
                     "Mise en place et responsable banc d'essai": "",
                     "Réalisation de nano-particules par ablation laser (ns / ps)": "",
                     "Caractérisation physico-chimique": "",
-                    "Formation MEB": ""
-                }
+                    "Formation MEB": "",
+                },
             },
-            "realisations": ["Production de nano-particules ITER-Like",
-                             "MEB, EDS, AFM, granulométrie",
-                             "Rapport pour le projet ITER",
-                             "Résultats envoyés pour étude toxicologique (suite du projet)"
-                             ],
-            "picture": "img/exp_sc_laser.jpg"
-        }
+            "realisations": [
+                "Production de nano-particules ITER-Like",
+                "MEB, EDS, AFM, granulométrie",
+                "Rapport pour le projet ITER",
+                "Résultats envoyés pour étude toxicologique (suite du projet)",
+            ],
+            "picture": "img/exp_sc_laser.jpg",
+        },
     },
     "Ingénieur stagiaire": {
         "type_exp": "Science",
@@ -191,18 +194,19 @@ complémentaire au logiciel actuel est alors développé.""",
                     "Synthèse organique et polymérisation sous atmosphère inerte": "",
                     "Mise en place et optimisation banc d'essai": "",
                     "Caractérisation physico-chimique": "",
-                    "Formulation et mise en œuvre d’encre": ""
-                }
+                    "Formulation et mise en œuvre d’encre": "",
+                },
             },
-            "realisations": ["Synthèse organique et polymérisation sous atmosphère inerte (Boîte à gants)",
-                             "Formulation et mise en œuvre d’encre",
-                             "RMN, IR,ATD, ATG, Voltampérométrie, Cyclage d’accumulateur",
-                             "Synthèse d'un nouveau matériau ORB",
-                             "**Dépôt de brevet** (Voir **Publications**)",
-                             "**Récompensé Prime stagiaire CEA**"
-                             ],
-            "picture": "img/exp_sc_bat.jpg"
-        }
+            "realisations": [
+                "Synthèse organique et polymérisation sous atmosphère inerte (Boîte à gants)",
+                "Formulation et mise en œuvre d’encre",
+                "RMN, IR,ATD, ATG, Voltampérométrie, Cyclage d’accumulateur",
+                "Synthèse d'un nouveau matériau ORB",
+                "**Dépôt de brevet** (Voir **Publications**)",
+                "**Récompensé Prime stagiaire CEA**",
+            ],
+            "picture": "img/exp_sc_bat.jpg",
+        },
     },
     "Technicien stagiaire": {
         "type_exp": "Science",
@@ -217,14 +221,15 @@ complémentaire au logiciel actuel est alors développé.""",
                     "Essais techniques sur banc d'essai": "",
                     "Contrôle qualité produits": "",
                     "Lancement de machine de production": "",
-                }
+                },
             },
-            "realisations": ["Reporting, contrôle qualité",
-                             "Echange culturel et linguistique",
-                             "Rapport fin de mission"
-                             ],
-            "picture": "img/exp_sc_enz.jpg"
-        }
+            "realisations": [
+                "Reporting, contrôle qualité",
+                "Echange culturel et linguistique",
+                "Rapport fin de mission",
+            ],
+            "picture": "img/exp_sc_enz.jpg",
+        },
     },
     "datadojo": {
         "type_exp": "Diverses",
@@ -233,18 +238,15 @@ complémentaire au logiciel actuel est alors développé.""",
             "subtitle": "Initiation au machine learning - Nutri-scorez vos aliments !",
             "date": "2023",
             "context": """Animation d'un atelier de découverte des algorithmes de machine learning usuels en travaillant sur la base de donner "Open Food Fact". Après une explication générale de la pipeline de travail, ces modèles sont présentés un à un puis implémentés pour déterminer automatiquement le NutriScore de produits alimentaires.""",
-            "missions": {
-                "resume": "",
-                "examples": {}
-            },
+            "missions": {"resume": "", "examples": {}},
             "realisations": [
                 "Organisation et Animation de l'atelier",
                 "Data analyse",
                 "Machine learning",
-                "Notebook pré-configuré (Voir Média)"
-                             ],
-            "picture": "img/exp_dojo.png"
-        }
+                "Notebook pré-configuré (Voir Média)",
+            ],
+            "picture": "img/exp_dojo.png",
+        },
     },
     "autoML": {
         "type_exp": "Diverses",
@@ -253,19 +255,16 @@ complémentaire au logiciel actuel est alors développé.""",
             "subtitle": "",
             "date": "2022 - aujourd'hui",
             "context": "Création d'une WebApp proposant des outils de data science pour de l’auto-EDA et de l’auto-ML (Voir Média)",
-            "missions": {
-                "resume": "",
-                "examples": {}
-            },
-            "realisations": ["Développement python - API",
-                             "Librairie Data analyse",
-                             "Librairie Machine learning",
-                             "Librairie Data Viz",
-                             "Interface (Streamlit)"
-                             "Docker"
-                             ],
-            "picture": "img/exp_automl.jpg"
-        }
+            "missions": {"resume": "", "examples": {}},
+            "realisations": [
+                "Développement python - API",
+                "Librairie Data analyse",
+                "Librairie Machine learning",
+                "Librairie Data Viz",
+                "Interface (Streamlit)" "Docker",
+            ],
+            "picture": "img/exp_automl.jpg",
+        },
     },
     "Projet césure - Artisanat": {
         "type_exp": "Diverses",
@@ -274,18 +273,16 @@ complémentaire au logiciel actuel est alors développé.""",
             "subtitle": "Rénovation d’une maison de A à Z",
             "date": "2019-2020",
             "context": "Suite à mon CDD, je suis devenu propriétaire d'une maison datant des années 1930. Nécessitant de gros travaux d'aménagements et de mises à niveau, je me suis lancé dans sa rénovation complète.",
-            "missions": {
-                "resume": "",
-                "examples": {}
-            },
-            "realisations": ["Réalisation des gros œuvres sur chantier",
-                             "Création d’espaces de vie",
-                             "Mise à niveau électrique – circuit de plomberie",
-                             "Ebénisterie",
-                             "Lancement chaîne YouTube sur le travail du bois (Voir **Média**)"
-                             ],
-            "picture": "img/exp_diver_maison.jpg"
-        }
+            "missions": {"resume": "", "examples": {}},
+            "realisations": [
+                "Réalisation des gros œuvres sur chantier",
+                "Création d’espaces de vie",
+                "Mise à niveau électrique – circuit de plomberie",
+                "Ebénisterie",
+                "Lancement chaîne YouTube sur le travail du bois (Voir **Média**)",
+            ],
+            "picture": "img/exp_diver_maison.jpg",
+        },
     },
     "Opérateur, cuisinier, fermier": {
         "type_exp": "Diverses",
@@ -296,16 +293,16 @@ complémentaire au logiciel actuel est alors développé.""",
             "context": "Opportunité de découvrir le Japon tout en travaillant dans un centre d'activités.",
             "missions": {
                 "resume": "",
-                "examples": {'Responsable stand "Pizza" et stand "Grillade"': "",
-                             "Atelier de menuiserie": "",
-                             "Accompagnement équitation": "",
-                             "Travaux de la ferme": ""
-                             }
+                "examples": {
+                    'Responsable stand "Pizza" et stand "Grillade"': "",
+                    "Atelier de menuiserie": "",
+                    "Accompagnement équitation": "",
+                    "Travaux de la ferme": "",
+                },
             },
-            "realisations": ["Echange culturel et linguistique"
-                             ],
-            "picture": "img/exp_diver_jap.jpg"
-        }
+            "realisations": ["Echange culturel et linguistique"],
+            "picture": "img/exp_diver_jap.jpg",
+        },
     },
     "Opérateur": {
         "type_exp": "Diverses",
@@ -316,15 +313,15 @@ complémentaire au logiciel actuel est alors développé.""",
             "context": "Chaîne de production d’emballage carton.",
             "missions": {
                 "resume": "",
-                "examples": {'Réglage machine de production': "",
-                             "Mise en palette sortie chaîne de production": "",
-                             "Contrôle qualité": "",
-                             }
+                "examples": {
+                    "Réglage machine de production": "",
+                    "Mise en palette sortie chaîne de production": "",
+                    "Contrôle qualité": "",
+                },
             },
-            "realisations": ["Contrôle qualité"
-                             ],
-            "picture": "img/exp_diver_cart.jpg"
-        }
+            "realisations": ["Contrôle qualité"],
+            "picture": "img/exp_diver_cart.jpg",
+        },
     },
 }
 
@@ -341,20 +338,50 @@ TOOLS_DICT = {
     "Ops (Docker, Kubernetes, ArgoCD, Jenkins, ...)": 4,
     "Outils (Git, VsCode, Jupyter Notebook, ...)": 7,
     "Env (Windows, Ubuntu, Fedora)": 7,
-    "Méthodologie (Agile, Scrum, Kanban, SMART, Gantt, ...)": 5
+    "Méthodologie (Agile, Scrum, Kanban, SMART, Gantt, ...)": 5,
 }
 
 
 COMP_DICT = dict(
-    character=["Humaines", "Management", "Communication", "Relations clients", "Reporting", "Gestion de projets", "Montage", "Roadmap", "Cahier des Charges", "RoI", "Agile", "Data", "Data analyse", "Data science", "Data Viz", "Développement Python", "Base de donnée"],
-    parent=["", "Humaines", "Humaines", "Humaines", "Humaines", "", "Gestion de projets", "Gestion de projets", "Gestion de projets", "Gestion de projets", "Gestion de projets", "", "Data","Data","Data","Data","Data"],
-    value=[10, 4, 6, 5,8, 10, 6, 7, 5, 4,3, 12,12,12,10,6,4])
+    character=[
+        "Humaines",
+        "Management",
+        "Communication",
+        "Relations clients",
+        "Reporting",
+        "Gestion de projets",
+        "Montage",
+        "Roadmap",
+        "Cahier des Charges",
+        "RoI",
+        "Agile",
+        "Data",
+        "Data analyse",
+        "Data science",
+        "Data Viz",
+        "Développement Python",
+        "Base de donnée",
+    ],
+    parent=[
+        "",
+        "Humaines",
+        "Humaines",
+        "Humaines",
+        "Humaines",
+        "",
+        "Gestion de projets",
+        "Gestion de projets",
+        "Gestion de projets",
+        "Gestion de projets",
+        "Gestion de projets",
+        "",
+        "Data",
+        "Data",
+        "Data",
+        "Data",
+        "Data",
+    ],
+    value=[10, 4, 6, 5, 8, 10, 6, 7, 5, 4, 3, 12, 12, 12, 10, 6, 4],
+)
 
-SOFT_LIST = [
-    "Autodidacte",
-    "Organisé",
-    "Rigoureux",
-    "Autonome",
-    "Curieux",
-    "Proactif"
-    ]
+SOFT_LIST = ["Autodidacte", "Organisé", "Rigoureux", "Autonome", "Curieux", "Proactif"]
