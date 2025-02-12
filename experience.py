@@ -85,9 +85,9 @@ def experience_page(exp: dict):
 
     # Section d'aperçu
     col1, col2, col3 = st.columns(3)
-    col1.image("img/exp_data.jpg")  # , width=200)
-    col2.image("img/exp_chimie.jpg")  # , width=200)
-    col3.image("img/exp_open.jpg")  # , width=200)
+    col1.image("img/exp_data.jpg")
+    col2.image("img/exp_chimie.jpg")
+    col3.image("img/exp_open.jpg")
     st.text("")
     st.markdown(
         "<h6 style='text-align: center; color: gray;'>Choisissez une catégorie</h6>",

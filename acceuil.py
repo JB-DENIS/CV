@@ -51,8 +51,8 @@ def display_intro_section():
         st.subheader("Qui suis-je ?")
         st.markdown(
             "<div style='text-align: justify;'>"
-            "Ingénieur IA et Docteur ingénieur en Physico-Chimie des Matériaux, je compte mettre à profit "
-            "mes connaissances et mon savoir-faire par le développement de solutions innovantes dans le domaine "
+            "Ingénieur IA et Docteur ingénieur en Physico-Chimie des Matériaux, je mets à profit "
+            "mes connaissances et mon savoir-faire pour développer des solutions innovantes dans le domaine "
             "de l’Intelligence Artificielle."
             "</div>",
             unsafe_allow_html=True,
