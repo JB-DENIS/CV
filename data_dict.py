@@ -245,6 +245,7 @@ EXP_DICT = {
             "realisations": [
                 "Le traitement d’images",
                 "La génération d’images & CycleGAN",
+                "(Voir **Média**)",
             ],
             "picture": None,
         },
@@ -260,6 +261,7 @@ EXP_DICT = {
             "realisations": [
                 "7 conseils pour utiliser efficacement les IA génératives",
                 "Expert IA - intelligence-artificielle.com",
+                "(Voir **Média**)",
             ],
             "picture": None,
         },
@@ -347,9 +349,7 @@ EXP_DICT = {
             "date": "2018-2024",
             "context": "Création de contenus vidéo autour du bricolage et des projets personnels.",
             "missions": {"resume": "", "examples": {}},
-            "realisations": [
-                "Lachaineajb - Bricolage",
-            ],
+            "realisations": ["Lachaineajb - Bricolage", "(Voir **Média**)"],
             "picture": None,
         },
     },
@@ -365,7 +365,7 @@ EXP_DICT = {
                 "Organisation et Animation de l'atelier",
                 "Data analyse",
                 "Machine learning",
-                "Notebook pré-configuré (Voir Média)",
+                "Notebook pré-configuré (Voir **Média**)",
             ],
             "picture": "img/exp_dojo.png",
         },
