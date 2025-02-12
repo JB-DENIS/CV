@@ -9,90 +9,109 @@ from medias import medias_page
 from publications import publis_page
 
 
-def catego(option):
+def set_sidebar():
+    """Configure la barre latérale."""
+    st.sidebar.image("img/profil.png")
+    st.sidebar.title("Jean-Benoît DENIS, Ph.D")
+    st.sidebar.subheader("Responsable de pôle, Ingénieur Data Scientist")
+    st.sidebar.subheader("Ingénieur IA")
+    st.sidebar.image("img/bar.jpg", use_container_width=True)
+    st.sidebar.markdown(
+        "<h1 style='text-align: center; color: blue;'>Navigation</h1>",
+        unsafe_allow_html=True,
+    )
 
-    if option == "Accueil":
-        accueille_page()
+    # Options de navigation
+    option = st.sidebar.selectbox(
+        "",
+        [
+            "Accueil",
+            "Compétences",
+            "Formations",
+            "Expériences",
+            "Intérêts",
+            "Publications",
+            "Médias",
+        ],
+    )
 
-    elif option == "Compétences":
-        competences_page(
+    st.sidebar.text("")
+    st.sidebar.text("")
+    st.sidebar.image("img/bar.jpg", use_container_width=True)
+
+    # Informations personnelles
+    st.sidebar.write(":telephone_receiver: 06 29 07 69 72")
+    st.sidebar.write(
+        ":e-mail: [jeanbenoitdenis@gmail.com](mailto:jeanbenoitdenis@gmail.com)"
+    )
+    st.sidebar.write(
+        ":round_pushpin:[4 Rue Hector Blanchet 38500 Voiron](https://goo.gl/maps/E8iCnmAg6AetDBy76)"
+    )
+
+    return option
+
+
+def apply_custom_styles():
+    """Applique des styles CSS personnalisés."""
+    st.markdown(
+        f"""
+    <style>
+        .reportview-container .main .block-container{{
+            max-width: 2560px;
+            padding-top: 0rem;
+            padding-right: 5rem;
+            padding-left: 5rem;
+            padding-bottom: 0rem;
+        }}
+        .reportview-container .main {{
+            color: black;
+            background-color: white;
+        }}
+    </style>
+    """,
+        unsafe_allow_html=True,
+    )
+
+
+def handle_navigation(option):
+    """Gère la navigation entre les pages."""
+    pages = {
+        "Accueil": accueille_page,
+        "Compétences": lambda: competences_page(
             data_tools=TOOLS_DICT, data_comp=COMP_DICT, data_soft=SOFT_LIST
-        )
+        ),
+        "Formations": formations_page,
+        "Expériences": lambda: experience_page(EXP_DICT),
+        "Intérêts": interets_page,
+        "Publications": publis_page,
+        "Médias": medias_page,
+    }
 
-    elif option == "Formations":
-        formations_page()
-
-    elif option == "Expériences":
-        experience_page(EXP_DICT)
-
-    elif option == "Intérêts":
-        interets_page()
-
-    elif option == "Publications":
-        publis_page()
-
-    elif option == "Médias":
-        medias_page()
+    # Appelle la fonction correspondant à l'option sélectionnée
+    page_function = pages.get(option)
+    if page_function:
+        page_function()
 
 
-# Display :
-st.set_page_config(page_title="CV JB DENIS", layout="wide", page_icon="img/profil.jpg")
-st.markdown("""<a id="top"></a>""", unsafe_allow_html=True)
-st.sidebar.image("img/profil.png")
-st.sidebar.title("Jean-Benoît DENIS, Ph.D")
-st.sidebar.subheader("Responsable de pôle, Ingénieur Data Scientist")
-st.sidebar.subheader("Ingénieur IA")
+# Main
+def main():
+    """Point d'entrée principal."""
+    st.set_page_config(
+        page_title="CV JB DENIS",
+        layout="wide",
+        page_icon="img/profil.jpg",
+    )
+    st.markdown("""<a id="top"></a>""", unsafe_allow_html=True)
 
-st.sidebar.image("img/bar.jpg", use_container_width=True)
-st.sidebar.markdown(
-    "<h1 style='text-align: center; color: blue;'>Navigation</h1>",
-    unsafe_allow_html=True,
-)
-option = st.sidebar.selectbox(
-    "",
-    [
-        "Accueil",
-        "Compétences",
-        "Formations",
-        "Expériences",
-        "Intérêts",
-        "Publications",
-        "Médias",
-    ],
-)
-st.sidebar.text("")
-st.sidebar.text("")
-st.sidebar.image("img/bar.jpg", use_container_width=True)
+    # Configure la barre latérale et obtient l'option sélectionnée
+    option = set_sidebar()
+
+    # Applique les styles personnalisés
+    apply_custom_styles()
+
+    # Gère la navigation
+    handle_navigation(option)
 
 
-# st.sidebar.write('31 ans - Permis B')
-st.sidebar.write(":telephone_receiver: 06 29 07 69 72")
-st.sidebar.write(
-    ":e-mail: [jeanbenoitdenis@gmail.com](mailto:jeanbenoitdenis@gmail.com)"
-)
-st.sidebar.write(
-    ":round_pushpin:[4 Rue Hector Blanchet 38500 Voiron](https://goo.gl/maps/E8iCnmAg6AetDBy76)"
-)
-
-
-st.markdown(
-    f"""
-<style>
-    .reportview-container .main .block-container{{
-        max-width: {2560}px;
-        padding-top: {0}rem;
-        padding-right: {5}rem;
-        padding-left: {5}rem;
-        padding-bottom: {0}rem;
-    }}
-    .reportview-container .main {{
-        color: {'black'};
-        background-color: {'white'};
-    }}
-</style>
-""",
-    unsafe_allow_html=True,
-)
-
-# Pages
-catego(option)
+if __name__ == "__main__":
+    main()
