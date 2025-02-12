@@ -6,6 +6,9 @@ media_lm = Image.open("img/media_lm.jpg")
 media_lr = Image.open("img/media_lr.jpg")
 media_git = Image.open("img/media_git.jpg")
 media_linkedin = Image.open("img/media_linkedin.jpg")
+media_podcast = Image.open("img/podcast.jpg")
+media_article = Image.open("img/article.jpg")
+media_interview = Image.open("img/interview.jpg")
 
 media_yt_f = open("video/YT.mp4", "rb")
 media_yt = media_yt_f.read()
@@ -22,7 +25,10 @@ def medias_page():
     git = "[**GitHub**](https://github.com/JB-DENIS)"
     lin = "[**LinkedIn**](https://www.linkedin.com/in/jbdenis/)"
     yt = "[**YouTube**](https://www.youtube.com/channel/UC1i8IXzTvu7rhaXBCLMaDmQ)"
-    nb_nutriscore = "[**Atelier Data**](https://github.com/JB-DENIS/atelier_ML)"
+    podcast = "[**Podcast**](https://youtube.com/playlist?list=PL0WJ6NGo78mzYH8U5NLUURHqR0vP5W0tm&si=djAVcOaWj9BCpo4g)"
+    article = "[**Article IA Générative**](https://kaizen-solutions.net/kaizen-insights/articles-et-conseils-de-nos-experts/7-conseils-pour-utiliser-efficacement-les-ia-generatives/)"
+    interview = "[**Interview IA**](https://intelligence-artificielle.com/expert-i-a-jean-benoit-denis-kaizen-solutions/)"
+    nb_nutriscore = "[**Atelier Machine learning**](https://github.com/JB-DENIS/atelier_ML/blob/main/data_dojo.ipynb)"
     automl = "[**Auto-Data**](https://github.com/JB-DENIS/auto-ML)"
 
     st.markdown(
@@ -47,17 +53,25 @@ def medias_page():
     st.text("")
     st.text("")
 
-    col32, col4, col5, col6, col7, col33 = st.columns((1, 0.5, 0.5, 0.5, 0.5, 1))
+    col32, col4, col5, col6, col7, col8, col9, col10, col33 = st.columns(
+        (1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1)
+    )
     col4.image(media_linkedin, use_container_width=True)
     col5.image(media_git, use_container_width=True)
-    col6.image("img/exp_dojo.png", use_container_width=True)
-    col7.image("img/exp_automl.jpg")  # , use_container_width =True)
+    col6.image(media_podcast, use_container_width=True)
+    col7.image(media_article, use_container_width=True)
+    col8.image(media_interview, use_container_width=True)
+    col9.image("img/exp_dojo.png", use_container_width=True)
+    col10.image("img/exp_automl.jpg")  # , use_container_width =True)
 
     # col4, col5, col6, col7, col8= st.columns((1,0.5,1,0.5,1))
     col4.markdown(lin, unsafe_allow_html=True)
     col5.markdown(git, unsafe_allow_html=True)
-    col6.markdown(nb_nutriscore, unsafe_allow_html=True)
-    col7.markdown(automl, unsafe_allow_html=True)
+    col6.markdown(podcast, unsafe_allow_html=True)
+    col7.markdown(article, unsafe_allow_html=True)
+    col8.markdown(interview, unsafe_allow_html=True)
+    col9.markdown(nb_nutriscore, unsafe_allow_html=True)
+    col10.markdown(automl, unsafe_allow_html=True)
 
     st.text("")
     st.text("")

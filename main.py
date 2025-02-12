@@ -38,13 +38,10 @@ def catego(option):
 # Display :
 st.set_page_config(page_title="CV JB DENIS", layout="wide", page_icon="img/profil.jpg")
 st.markdown("""<a id="top"></a>""", unsafe_allow_html=True)
-st.sidebar.image("img/profil.jpg")  # , width=220)
-# st.markdown(
-#     "<img src='img/profil.jpg' width='220' style='display: block; margin: 0 auto;'>",
-#     unsafe_allow_html=True,
-# )
+st.sidebar.image("img/profil.png")
 st.sidebar.title("Jean-Benoît DENIS, Ph.D")
-st.sidebar.subheader("Ingénieur Data Scientist")
+st.sidebar.subheader("Responsable de pôle, Ingénieur Data Scientist")
+st.sidebar.subheader("Ingénieur IA")
 
 st.sidebar.image("img/bar.jpg", use_container_width=True)
 st.sidebar.markdown(
