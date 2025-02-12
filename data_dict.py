@@ -1,6 +1,6 @@
 EXP_DICT = {
     "Responsable de Pôle Data & Algo": {
-        "type_exp": "Data",
+        "type_exp": "IA",
         "body": {
             "title": "Responsable de Pôle Data & Algo - Ingénieur Data Scientist",
             "subtitle": "KAIZEN Solutions - Montbonnot-Saint-Martin (38)",
@@ -34,7 +34,7 @@ EXP_DICT = {
         },
     },
     "Ingénieur RD Data Scientist": {
-        "type_exp": "Data",
+        "type_exp": "IA",
         "body": {
             "title": "Ingénieur R&D Data Science",
             "subtitle": "",
@@ -70,7 +70,7 @@ EXP_DICT = {
         },
     },
     "Apprenti Data Scientist": {
-        "type_exp": "Data",
+        "type_exp": "IA",
         "body": {
             "title": "Apprenti Data Scientist",
             "subtitle": "",
@@ -231,6 +231,128 @@ EXP_DICT = {
             "picture": "img/exp_sc_enz.jpg",
         },
     },
+    "podcasts": {
+        "type_exp": "Diverses",
+        "body": {
+            "title": "Podcasts",
+            "subtitle": "Podcasts de vulgarisation de Kaizen Solutions.",
+            "date": "2024",
+            "context": "Chef de projet et production des Podcasts de vulgarisation « Tech’Zen »",
+            "missions": {
+                "resume": "",
+                "examples": {},
+            },
+            "realisations": [
+                "Le traitement d’images",
+                "La génération d’images & CycleGAN",
+            ],
+            "picture": "",
+        },
+    },
+    "articles": {
+        "type_exp": "Diverses",
+        "body": {
+            "title": "Articles",
+            "subtitle": "",
+            "date": "2023-2024",
+            "context": "Publications autour des bonnes pratiques et réflexions sur l'utilisation des IA génératives.",
+            "missions": {"resume": "", "examples": {}},
+            "realisations": [
+                "7 conseils pour utiliser efficacement les IA génératives",
+                "Expert IA - intelligence-artificielle.com",
+            ],
+            "picture": "",
+        },
+    },
+    "talks": {
+        "type_exp": "Diverses",
+        "body": {
+            "title": "Talks",
+            "subtitle": "",
+            "date": "2023-2024",
+            "context": "Présentations techniques.",
+            "missions": {
+                "resume": "",
+                "examples": {},
+            },
+            "realisations": [
+                "Les IA génératives et leurs réglementations",
+                "Le NLP pour les nuls",
+            ],
+            "picture": "",
+        },
+    },
+    "debates": {
+        "type_exp": "Diverses",
+        "body": {
+            "title": "Débats sur l'IA",
+            "subtitle": "",
+            "date": "2024",
+            "context": "Organisation et animation de débats philosophiques et techniques autour de l'IA.",
+            "missions": {"resume": "", "examples": {}},
+            "realisations": [
+                "Qu’entendons-nous par IA?",
+                "Les IA sont-elles conscientes?",
+                "Les droits d’auteurs",
+            ],
+            "picture": "",
+        },
+    },
+    "workshops": {
+        "type_exp": "Diverses",
+        "body": {
+            "title": "Ateliers",
+            "subtitle": "",
+            "date": "2022-2024",
+            "context": "Workshop pour explorer et apprendre des techniques spécifiques autour de l'IA.",
+            "missions": {
+                "resume": "Animation et encadrement des ateliers",
+                "examples": {},
+            },
+            "realisations": [
+                "Le bon et le mauvais prompt",
+                "Nutriscorez vos aliments à l’aide de l’IA",
+                "Le notebook pour le dev",
+            ],
+            "picture": "",
+        },
+    },
+    "zythology_workshop": {
+        "type_exp": "Diverses",
+        "body": {
+            "title": "Atelier de Zythologie",
+            "subtitle": "Les accords Bières et Fromages",
+            "date": "2022-2024",
+            "context": """Animation d'ateliers de zythologie pour initier les participants aux accords parfaits entre bières et fromages. Ces ateliers combinent théorie et dégustation dans une approche conviviale.""",
+            "missions": {
+                "resume": "Encadrement et animation d'ateliers interactifs",
+                "examples": {
+                    "Introduction à la zythologie": "Présentation des bases de la dégustation de bières.",
+                    "Accords Bières-Fromages": "Dégustation commentée avec conseils pour associer les saveurs.",
+                },
+            },
+            "realisations": [
+                "Organisation et planification des ateliers",
+                "Encadrement de groupes lors des dégustations",
+                "Création de supports pédagogiques pour les participants",
+            ],
+            "picture": "",
+        },
+    },
+    "youtube": {
+        "type_exp": "Diverses",
+        "body": {
+            "title": "Vidéos YouTube",
+            "subtitle": "Production et montage vidéo",
+            "date": "2018-2024",
+            "context": "Création de contenus vidéo autour du bricolage et des projets personnels.",
+            "missions": {"resume": "", "examples": {}},
+            "realisations": [
+                "Lachaineajb - Bricolage",
+            ],
+            "picture": "",
+        },
+    },
     "datadojo": {
         "type_exp": "Diverses",
         "body": {
@@ -347,18 +469,6 @@ TOOLS_DICT = {
     "Collaboration (Figma, Miro, Klaxoon, Confluence, ...)": 7,
     "Outils divers (Office 365, Teams, SharePoint, Google Workspace, ...)": 8,
     "Autres outils (Adobe Premier Pro, Audacity, Discord, ...)": 8,
-    # "Python": 8,
-    # "Data (Pandas, Numpy, ...)": 8,
-    # "Machine learning (Scikit Learn, LightGBM, ...)": 7,
-    # "Deep learning (Tensorflow, Pytorch, ...)": 7,
-    # "Data Viz (Matplotlib, Ploty, seaborn, Grafana, Streamlit, ...)": 7,
-    # "Computer Vision - NLP (OpenCV, Pillow, Spacy, nltk, ...)": 6,
-    # "DataBase (ElasticSearch, PostgreSQL, ...)": 6,
-    # "Dev (FastAPI, Pydantic, SQLAlchemy, MLflow, ...)": 6,
-    # "Ops (Docker, Kubernetes, ArgoCD, Jenkins, ...)": 4,
-    # "Outils (Git, VsCode, Jupyter Notebook, ...)": 7,
-    # "Env (Windows, Ubuntu, Fedora)": 7,
-    # "Méthodologie (Agile, Scrum, Kanban, SMART, Gantt, ...)": 5,
 }
 
 
@@ -373,12 +483,12 @@ COMP_DICT = dict(
         "Montage",
         "Roadmap",
         "Cahier des Charges",
-        "RoI",
+        "Coordination",
         "Agile",
-        "Data",
-        "Data analyse",
+        "IA",
+        "IA générative",
         "Data science",
-        "Data Viz",
+        "Data analyse -Data Viz",
         "Développement Python",
         "Base de donnée",
     ],
@@ -395,13 +505,13 @@ COMP_DICT = dict(
         "Gestion de projets",
         "Gestion de projets",
         "",
-        "Data",
-        "Data",
-        "Data",
-        "Data",
-        "Data",
+        "IA",
+        "IA",
+        "IA",
+        "IA",
+        "IA",
     ],
-    value=[10, 4, 6, 5, 8, 10, 6, 7, 5, 4, 3, 12, 12, 12, 10, 6, 4],
+    value=[10, 4, 6, 5, 8, 10, 6, 7, 5, 6, 4, 12, 12, 12, 10, 6, 4],
 )
 
 SOFT_LIST = ["Autodidacte", "Organisé", "Rigoureux", "Autonome", "Curieux", "Proactif"]
