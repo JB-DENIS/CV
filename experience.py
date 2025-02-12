@@ -95,7 +95,7 @@ def experience_page(exp: dict):
     )
 
     # Onglets pour les catégories
-    tab1, tab2, tab3 = st.tabs(["Data", "Sciences", "Projets personnels"])
+    tab1, tab2, tab3 = st.tabs(["IA", "Sciences", "Projets personnels"])
 
     # Affichage des expériences dans les onglets correspondants
     categories = {
