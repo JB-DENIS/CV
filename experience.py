@@ -12,102 +12,100 @@ class NewExperience:
         realisations: list,
         picture: str,
     ):
-
         self.title = title
         self.subtitle = subtitle
         self.date = date
         self.context = context
         self.missions = missions
-        self.realisation = realisations
+        self.realisations = realisations
         self.picture = picture
 
-    def _template_col(self):
-        # exp = st.container()
+    def _render_missions(self):
+        """Affiche les missions sous un format structuré."""
+        if not self.missions.get("examples"):
+            return
+
+        col1, col2 = st.columns(2)
+        col1.subheader("Missions")
+        st.markdown(
+            f'<div style="text-align: justify;">{self.missions.get("resume")}</div>',
+            unsafe_allow_html=True,
+        )
+        st.text("")
+
+        col1, _, col2 = st.columns((1, 0.2, 1))
+        for i, (mission, description) in enumerate(
+            self.missions.get("examples").items()
+        ):
+            target_col = col1 if i % 2 == 0 else col2
+            target_col.write(f"**_{mission}_**")
+            target_col.markdown(
+                f'<div style="text-align: justify;">{description}</div>',
+                unsafe_allow_html=True,
+            )
+            target_col.text("")
+
+    def _render_realisations(self):
+        """Affiche les réalisations sous forme de liste."""
+        st.subheader("Réalisations")
+        for realisation in self.realisations:
+            st.write(f":black_small_square: {realisation}")
+
+    def render(self):
+        """Affiche l'expérience avec son template."""
         with st.expander(label=f"**{self.title}**"):
-            # Title
-            col1, col2, col3 = st.columns((2, 0.8, 1))
+            col1, _, col3 = st.columns((2, 0.8, 1))
             col1.header(self.title)
             col3.header(self.date)
             st.subheader(f"_{self.subtitle}_")
 
-            # Context
-            col1, col2, col3 = st.columns((2, 0.2, 1))
+            # Contexte
+            col1, _, col3 = st.columns((2, 0.2, 1))
             col1.subheader("Contexte")
             col1.markdown(
-                f'<div style="text-align: justify;">{self.context}<div>',
+                f'<div style="text-align: justify;">{self.context}</div>',
                 unsafe_allow_html=True,
             )
-            col3.text("")
-            col3.text("")
-            col3.text("")
-            col3.text("")
-            col3.image(self.picture, use_container_width="auto")
+            if self.picture:
+                col3.image(self.picture, use_container_width=True)
+
             st.text("")
-            # Mission
+            # Missions
+            self._render_missions()
+            st.text("")
 
-            if self.missions.get("examples"):
-                col1, col2 = st.columns(2)
-                col1.subheader("Missions")
-                st.markdown(
-                    f'<div style="text-align: justify;">{self.missions.get("resume")}<div>',
-                    unsafe_allow_html=True,
-                )
-                st.text("")
-                col1, col2, col3 = st.columns((1, 0.2, 1))
-                n = 0
-                for k, v in self.missions.get("examples").items():
-
-                    if (n % 2) == 0:
-                        col1, col2, col3 = st.columns((1, 0.2, 1))
-                        col1.write(f"**_{k}_**")
-                        col1.markdown(
-                            f'<div style="text-align: justify;">{v}<div>',
-                            unsafe_allow_html=True,
-                        )
-                        col1.text("")
-                    else:
-                        col3.write(f"_**{k}**_")
-                        col3.markdown(
-                            f'<div style="text-align: justify;">{v}<div>',
-                            unsafe_allow_html=True,
-                        )
-                        col3.text("")
-
-                    n += 1
-                st.text("")
-            # Realisations
-            st.subheader("Réalisations")
-            for r in self.realisation:
-
-                st.write(f":black_small_square: {r}")
+            # Réalisations
+            self._render_realisations()
 
 
 def experience_page(exp: dict):
-
-    st.header("EXPERIENCES")
+    """Affiche la page des expériences."""
+    st.header("EXPÉRIENCES")
     st.text("")
+
+    # Section d'aperçu
     col1, col2, col3 = st.columns(3)
-    col1.image("img/exp_data.jpg", width=200)
-    col2.image("img/exp_chimie.jpg", width=200)
-    col3.image("img/exp_open.jpg", width=200)
+    col1.image("img/exp_data.jpg")  # , width=200)
+    col2.image("img/exp_chimie.jpg")  # , width=200)
+    col3.image("img/exp_open.jpg")  # , width=200)
     st.text("")
     st.markdown(
-        "<h6 style='text-align: center; color: gray;'>Choisissez une catégorie</h5>",
+        "<h6 style='text-align: center; color: gray;'>Choisissez une catégorie</h6>",
         unsafe_allow_html=True,
     )
 
-    tab1, tab2, tab3 = st.tabs(["Data", "Sciences", "Projets personnels"])
+    # Onglets pour les catégories
+    tab1, tab2, tab3 = st.tabs(["IA", "Sciences", "Projets personnels"])
 
-    for k, v in exp.items():
+    # Affichage des expériences dans les onglets correspondants
+    categories = {
+        "IA": tab1,
+        "Science": tab2,
+        "Diverses": tab3,
+    }
 
-        if v.get("type_exp") == "Data":
-            with tab1:
-                NewExperience(**v.get("body"))._template_col()
-
-        if v.get("type_exp") == "Science":
-            with tab2:
-                NewExperience(**v.get("body"))._template_col()
-
-        if v.get("type_exp") == "Diverses":
-            with tab3:
-                NewExperience(**v.get("body"))._template_col()
+    for key, value in exp.items():
+        type_exp = value.get("type_exp")
+        if type_exp in categories:
+            with categories[type_exp]:
+                NewExperience(**value.get("body")).render()
