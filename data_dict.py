@@ -30,7 +30,7 @@ EXP_DICT = {
                 "Podcasts et articles techniques",
                 "Gestion budgétaire"
             ],
-            "picture": "img/exp_kaizen.jpg"
+            "picture": "img/exp_kzn.jpg"
         }
     },
     
