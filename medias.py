@@ -64,7 +64,7 @@ def medias_page():
 
     # Deuxième ligne
     cols = st.columns(
-        1, 1, 1, 1, 1, 1, 1, 1, 1
+        (1, 1, 1, 1, 1, 1, 1, 1, 1)
     )  # (1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
     display_media_row(
         [cols[i] for i in range(1, 8)],
