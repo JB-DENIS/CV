@@ -66,7 +66,8 @@ class NewExperience:
                 f'<div style="text-align: justify;">{self.context}</div>',
                 unsafe_allow_html=True,
             )
-            col3.image(self.picture, use_container_width=True)
+            if self.picture:
+                col3.image(self.picture, use_container_width=True)
 
             st.text("")
             # Missions

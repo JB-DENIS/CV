@@ -246,7 +246,7 @@ EXP_DICT = {
                 "Le traitement d’images",
                 "La génération d’images & CycleGAN",
             ],
-            "picture": "",
+            "picture": None,
         },
     },
     "articles": {
@@ -261,7 +261,7 @@ EXP_DICT = {
                 "7 conseils pour utiliser efficacement les IA génératives",
                 "Expert IA - intelligence-artificielle.com",
             ],
-            "picture": "",
+            "picture": None,
         },
     },
     "talks": {
@@ -279,7 +279,7 @@ EXP_DICT = {
                 "Les IA génératives et leurs réglementations",
                 "Le NLP pour les nuls",
             ],
-            "picture": "",
+            "picture": None,
         },
     },
     "debates": {
@@ -295,7 +295,7 @@ EXP_DICT = {
                 "Les IA sont-elles conscientes?",
                 "Les droits d’auteurs",
             ],
-            "picture": "",
+            "picture": None,
         },
     },
     "workshops": {
@@ -314,7 +314,7 @@ EXP_DICT = {
                 "Nutriscorez vos aliments à l’aide de l’IA",
                 "Le notebook pour le dev",
             ],
-            "picture": "",
+            "picture": None,
         },
     },
     "zythology_workshop": {
@@ -336,7 +336,7 @@ EXP_DICT = {
                 "Encadrement de groupes lors des dégustations",
                 "Création de supports pédagogiques pour les participants",
             ],
-            "picture": "",
+            "picture": None,
         },
     },
     "youtube": {
@@ -350,7 +350,7 @@ EXP_DICT = {
             "realisations": [
                 "Lachaineajb - Bricolage",
             ],
-            "picture": "",
+            "picture": None,
         },
     },
     "datadojo": {
