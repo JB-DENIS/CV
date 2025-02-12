@@ -1,36 +1,39 @@
 EXP_DICT = {
-    "Ingénieur Data Scientist": {
+    "Responsable de Pôle Data & Algo": {
         "type_exp": "Data",
         "body": {
-            "title": "Ingénieur Data Science",
-            "subtitle": "",
-            "date": "2022 - Aujourd'hui",
+            "title": "Responsable de Pôle Data & Algo - Ingénieur Data Scientist",
+            "subtitle": "KAIZEN Solutions - Montbonnot-Saint-Martin (38)",
+            "date": "2022 – Aujourd’hui",
             "context": """ESN spécialisée dans la conception, le développement et la maintenabilité de solutions informatiques, techniques et industrielles sur des systèmes complexes et critiques.""",
             "missions": {
-                "resume": "Ingénieur en Data Science en mission chez le client et réalisation de projets Data en interne à Kaizen Solution",
+                "resume": "Définir et mettre en œuvre la vision stratégique IA, gérer les projets IA/Data et valoriser les talents internes.",
                 "examples": {
-                    "Mission Thales – Connected Radiology :": "Développement d'algorithmes de parsing de logs et d'alerting pour des systèmes de radiologie. Conception d'outils de dashboarding pour de l'aide à la maintenance. POC NLP (Anonymisation automatique, clustering de logs)""",
-                    "Kaizen solutions - Horizon:": "Computer Vision / Objects Tracking pour la reconnaissance de montagnes sur image",
-                    "Kaizen solutions - Projets internes" : "POC d’un outil de parsing automatique de CV. Mise en place d’un Toolkit Data"
+                    "Vision stratégique IA": "Conception de la vision stratégique « H2030 » et élaboration de la roadmap du pôle.",
+                    "Projets IA innovants": "Relais pour les projets Minalogic (« L'IA et le défi énergétique », « DeepFake »), chef de projet pour « Dis-ADEME » et « CV Generator ».",
+                    "Formation et encadrement": "Création de formations sur les IA génératives et participation à la création de la « Charte IA Kaizen ».",
+                    "Missions clients (TDK Chirp)": "QA et évaluation hardware/software pour des capteurs ultrason.",
+                    "Missions clients (TDK Wasabi)": "Évaluation de solutions Key Word Spotting et développement d’outils pour l’AudioLab.",
+                    "Missions clients (Thales Connected Radiology)": "Développement d’algorithmes de parsing de logs, dashboarding et POC NLP."
                 }
             },
             "realisations": [
+                "Gestion de projet IA et Data",
+                "Coordination d’équipes",
+                "Management et valorisation des talents",
                 "Développement Python",
-                "Mise en place environnement dév (Poetry, linter, etc.)"
-                "ElasticSearch, kibana",
-                "Grafana",
-                "Data Analyse",
-                "Machine learning",
-                "Algorithmie",
-                "Veille technologique",
-                "POC NLP",
-                "POC Computer Vision",
-                "Docker, Kubernetes",
-                "Git"      
+                "IA Générative avec RAG",
+                "Atelier et talk sur l’IA",
+                "NLP (anonymisation, clustering)",
+                "Computer Vision (Object Tracking)",
+                "Dashboarding et outils de visualisation",
+                "Podcasts et articles techniques",
+                "Gestion budgétaire"
             ],
-            "picture": "img/exp_kzn.jpg"
+            "picture": "img/exp_kaizen.jpg"
         }
     },
+    
     "Ingénieur RD Data Scientist": {
         "type_exp": "Data",
         "body": {
