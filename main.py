@@ -13,7 +13,7 @@ def set_sidebar():
     """Configure la barre latérale."""
     st.sidebar.image("img/profil.png")
     st.sidebar.title("Jean-Benoît DENIS, Ph.D")
-    st.sidebar.subheader("Responsable de pôle \n Ingénieur IA")
+    st.sidebar.subheader("Responsable de pôle")
     st.sidebar.subheader("Ingénieur IA")
     st.sidebar.image("img/bar.jpg", use_container_width=True)
     st.sidebar.markdown(

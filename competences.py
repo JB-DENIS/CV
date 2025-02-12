@@ -56,5 +56,5 @@ def competences_page(data_tools: dict, data_comp: dict, data_soft: list):
         st.image("img/comp_soft.jpg", caption="Compétences Soft Skills")
 
     with col2:
-        st.image("img/comp_lang.jpg", caption="Langages")
+        st.image("img/comp_lang.jpg", caption="Langues")
         st.plotly_chart(fig_comp, use_container_width=True)

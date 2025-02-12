@@ -467,7 +467,7 @@ TOOLS_DICT = {
     "Méthodologie (Agile, Scrum, Kanban, SMART, Diagramme de Gantt, ...)": 8,
     "Gestion de projet (Jira, Trello, GitLab, Azure DevOps, Gantt Project, ...)": 8,
     "Collaboration (Figma, Miro, Klaxoon, Confluence, ...)": 7,
-    "Outils divers (Office 365, Teams, SharePoint, Google Workspace, ...)": 8,
+    "Bureautique (Office 365, Teams, SharePoint, Google Workspace, ...)": 8,
     "Autres outils (Adobe Premier Pro, Audacity, Discord, ...)": 8,
 }
 
